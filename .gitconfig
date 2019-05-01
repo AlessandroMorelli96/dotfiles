@@ -1,0 +1,7 @@
+[core]
+	editor = vim
+[user]
+	name = Alessandro Morelli
+	email = amorelli96@gmail.com
+[merge]
+	tool = vimdiff
