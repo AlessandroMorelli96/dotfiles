@@ -1,8 +1,12 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Setting for the new UTF-8 terminal support in Lion
+export LC_CTYPE="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
 # zsh tmux settings
-ZSH_TMUX_AUTOSTART='true'
+#ZSH_TMUX_AUTOSTART='true'
 
 # color
 export TERM="xterm-256color"
@@ -14,18 +18,17 @@ export ZSH="/Users/clownfire/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
-OWERLEVEL9K_MODE='nerdfont-complete'
+#ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+#POWERLEVEL9K_MODE='nerdfont-complete'
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh dir vcs status)
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_DISABLE_RPROMPT=false
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh dir vcs status)
+#POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+#POWERLEVEL9K_DISABLE_RPROMPT=false
+#POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 
 # Load Zsh tools for syntax highlighting and autosuggestions
 HOMEBREW_FOLDER="/usr/local/share"
-source "$HOMEBREW_FOLDER/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-source "$HOMEBREW_FOLDER/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -73,8 +76,8 @@ source "$HOMEBREW_FOLDER/zsh-autosuggestions/zsh-autosuggestions.zsh"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(osx sudo history taskwarrior tmux tmuxinator zsh-autosuggestions zsh-syntax-highlighting)
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+plugins=(tmux tmuxinator zsh-autosuggestions zsh-syntax-highlighting)
+#source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source $ZSH/oh-my-zsh.sh
 
@@ -84,7 +87,7 @@ source $ZSH/oh-my-zsh.sh
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='mvim'
+  export EDITOR='vim'
 fi
 
 # ssh
