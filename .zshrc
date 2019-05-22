@@ -20,12 +20,12 @@ export ZSH="/Users/clownfire/.oh-my-zsh"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="powerlevel9k/powerlevel9k"
 ZSH_THEME="powerlevel10k/powerlevel10k"
-#POWERLEVEL9K_MODE='nerdfont-complete'
+POWERLEVEL9K_MODE='nerdfont-complete'
 
-#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh dir vcs status)
-#POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-#POWERLEVEL9K_DISABLE_RPROMPT=false
-#POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh dir vcs status)
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_DISABLE_RPROMPT=false
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 
 # Load Zsh tools for syntax highlighting and autosuggestions
 HOMEBREW_FOLDER="/usr/local/share"

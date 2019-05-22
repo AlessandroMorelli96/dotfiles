@@ -2,6 +2,8 @@
 	#   2.  MAKE TERMINAL BETTER
 	#   -----------------------------
 
+    alias sz='source $HOME/.zshrc'
+    alias sa='source $HOME/.config/zsh/.oh-my-zsh/custom/aliases.zsh'
     alias vv='vim $HOME/.config/nvim/init.vim'
     alias va='vim $HOME/.oh-my-zsh/custom/aliases.zsh'
 	alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -77,6 +79,15 @@
 	#   ---------------------------------------
 	#   10.  PROGRAMS
 	#   ---------------------------------------
+
+
+    kali1(){
+        cd ~/VirtualBox\ VMs/kali;
+        export DISPLAY=:0;
+        vagrant up;
+        vagrant ssh;
+    }
+    alias kali='cd ~/VirtualBox\ VMs/kali; export DISPLAY=:0 && vagrant up && vagrant ssh'
 
     alias vim='nvim'
 	alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
