@@ -76,7 +76,7 @@ HOMEBREW_FOLDER="/usr/local/share"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(tmux tmuxinator zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(tmux tmuxinator zsh-autosuggestions zsh-syntax-highlighting zsh-completions)
 #source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source $ZSH/oh-my-zsh.sh
