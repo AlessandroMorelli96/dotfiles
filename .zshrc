@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/Cellar/openvpn/2.4.7/sbin:$PATH
 
 # Setting for the new UTF-8 terminal support in Lion
 export LC_CTYPE="en_US.UTF-8"

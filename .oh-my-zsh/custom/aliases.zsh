@@ -81,14 +81,7 @@
 	#   ---------------------------------------
 
 
-    kali1(){
-        cd ~/VirtualBox\ VMs/kali;
-        export DISPLAY=:0;
-        vagrant up;
-        vagrant ssh;
-    }
     alias kali='cd ~/VirtualBox\ VMs/kali; export DISPLAY=:0 && vagrant up && vagrant ssh'
 
     alias vim='nvim'
-	alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
 	alias proxychains='proxychains4'
