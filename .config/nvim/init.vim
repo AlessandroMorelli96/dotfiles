@@ -98,17 +98,20 @@ set ffs=unix,dos,mac
 " => Spaces and Tubs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+
 " Number of space in 
 set tabstop=4
 
- " Number of spaces in tab when editing
+" show existing tab with 4 spaces width
 set softtabstop=4
 
 " tabs are spaces
 set expandtab
 
 set smarttab
-set smartindent
+" set smartindent
 set autoindent
 set ignorecase                     " Make searching case insensitive
 set smartcase                      " Make search sensitive to capital letters

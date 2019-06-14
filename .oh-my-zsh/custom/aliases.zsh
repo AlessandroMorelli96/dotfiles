@@ -1,29 +1,43 @@
-#   -----------------------------
-	#   2.  MAKE TERMINAL BETTER
+    #   -----------------------------
+	#   1. EDIT FILE
 	#   -----------------------------
-
+    
     alias sz='source $HOME/.zshrc'
     alias sa='source $HOME/.config/zsh/.oh-my-zsh/custom/aliases.zsh'
     alias vv='vim $HOME/.config/nvim/init.vim'
     alias va='vim $HOME/.oh-my-zsh/custom/aliases.zsh'
 	alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 	alias vz='vim $HOME/.zshrc'
+
+    #   -----------------------------
+	#   2.  MAKE TERMINAL BETTER
+	#   -----------------------------
+
 	alias q='exit'
 	alias ls='ls -FGlAhp'
 	alias cp='cp -iv'                           # Preferred 'cp' implementation
 	alias mv='mv -iv'                           # Preferred 'mv' implementation
 	alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
 	alias less='less -FSRXc'                    # Preferred 'less' implementation
-	cd() { builtin cd "$@"; ls; }               # Always list directory contents upon 'cd'
-	alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
-	alias ..='cd ../'                           # Go back 1 directory level
 	alias c='clear'                             # c:            Clear terminal display
-	#alias which='type --all'                    # which:        Find executables
+	alias which='type --all'                    # which:        Find executables
 	alias path='echo -e ${PATH//:/\\n}'         # path:         Echo all executable Paths
 	alias show_options='shopt'                  # Show_options: display bash options settings
 	mcd () { mkdir -p "$1" && cd "$1"; }        # mcd:          Makes new Dir and jumps inside
 	trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
-
+    cd() { builtin cd "$@"; ls; }               # Always list directory contents upon 'cd'
+	alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
+	alias ..='cd ../'                           # Go back 1 directory level
+    alias d='dirs -v | head -10'
+    alias 1='cd -'
+    alias 2='cd -2'
+    alias 3='cd -3'
+    alias 4='cd -4'
+    alias 5='cd -5'
+    alias 6='cd -6'
+    alias 7='cd -7'
+    alias 8='cd -8'
+    alias 9='cd -9'
 	#   ---------------------------
 	#   5.  PROCESS MANAGEMENT
 	#   ---------------------------
@@ -68,20 +82,13 @@
 	#   9.  DOCKER
 	#   ---------------------------------------
 
-	#alias nmap='docker run --rm --net=host --privileged kali-box nmap'
-	#alias kali='docker run -it --rm --net=host --privileged -e DISPLAY -v $HOME/.Xauthority:/root/.Xauthority kali-box /bin/bash -c "tmux"'
-	#alias setoolkit='docker run --rm -ti kali-box setoolkit'
-	#alias hydra='docker run --rm -ti kali-box hydra'
-	#alias kali-install='/Users/clownfire/opt/installOnKali.py'
-	#alias shodan='docker run --rm -ti kali-box shodan'
-	#alias gdb='docker run --rm -ti kali-box gdb'
-
 	#   ---------------------------------------
 	#   10.  PROGRAMS
 	#   ---------------------------------------
 
 
-    alias kali='cd ~/VirtualBox\ VMs/kali; export DISPLAY=:0 && vagrant up && vagrant ssh'
-
+    alias kali='cd ~/Vagrant/kali-ctf; export DISPLAY=:0 && vagrant up && vagrant ssh'
+    alias update='brew update && brew upgrade'
     alias vim='nvim'
 	alias proxychains='proxychains4'
+    alias vimdiff='nvim -d'
