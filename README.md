@@ -1,1 +1,6 @@
-Thi is my set of Dotfiles
+Dotfiles
+
+- ZSH
+- oh-my-zsh
+- neovim
+- tmux
