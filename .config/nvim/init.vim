@@ -68,7 +68,7 @@ Plug 'scrooloose/nerdtree'
 " syntastic"
 Plug 'vim-syntastic/syntastic'
 " Youcompleteme"
-Plug 'Valloric/YouCompleteMe' ", { 'do': '/usr/bin/python install.py' }
+Plug 'Valloric/YouCompleteMe' , { 'do': '/usr/bin/python install.py' }
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
