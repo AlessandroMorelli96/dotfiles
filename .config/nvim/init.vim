@@ -34,7 +34,6 @@ set history=500
 
 " Line Number
 set relativenumber
-set number
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -60,16 +59,10 @@ endif
 " Install pluggins
 call plug#begin('~/.vim/plugged')
 
-" Nord colorscheme
-" Plug 'arcticicestudio/nord-vim'
-
 Plug 'tpope/vim-sensible'
 
 " NERD tree will be loaded on the first invocation of NERDTreeToggle command
 Plug 'scrooloose/nerdtree'
-
-" Gruvbox
-Plug 'morhetz/gruvbox'
 
 " syntastic"
 Plug 'vim-syntastic/syntastic'
@@ -85,8 +78,6 @@ call plug#end()
 
 " Enable syntax highlighting
 syntax enable
-
-colorscheme gruvbox
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -119,7 +110,7 @@ set softtabstop=4
 set expandtab
 
 set smarttab
-" set smartindent
+set smartindent
 set autoindent
 set ignorecase                     " Make searching case insensitive
 set smartcase                      " Make search sensitive to capital letters
