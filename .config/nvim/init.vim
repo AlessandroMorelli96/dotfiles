@@ -59,16 +59,24 @@ endif
 
 " Install pluggins
 call plug#begin('~/.vim/plugged')
+
 " Nord colorscheme
-Plug 'arcticicestudio/nord-vim'
+" Plug 'arcticicestudio/nord-vim'
 
 Plug 'tpope/vim-sensible'
+
 " NERD tree will be loaded on the first invocation of NERDTreeToggle command
 Plug 'scrooloose/nerdtree'
+
+" Gruvbox
+Plug 'morhetz/gruvbox'
+
 " syntastic"
 Plug 'vim-syntastic/syntastic'
+
 " Youcompleteme"
 Plug 'Valloric/YouCompleteMe' , { 'do': '/usr/bin/python install.py' }
+
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -78,7 +86,7 @@ call plug#end()
 " Enable syntax highlighting
 syntax enable
 
-colorscheme nord 
+colorscheme gruvbox
 
 " Set extra options when running in GUI mode
 if has("gui_running")

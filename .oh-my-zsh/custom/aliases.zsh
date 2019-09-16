@@ -92,3 +92,12 @@
     alias vim='nvim'
 	alias proxychains='proxychains4'
     alias vimdiff='nvim -d'
+
+
+	#   ---------------------------------------
+	#   11.  TMUX
+	#   ---------------------------------------
+    
+    alias htb-connect='tmux new-session \; split-window -v \; split-window -h \; send-keys 'sudo openvpn ~/Downloads/LiquidNitrogen.ovpn' C-m \; '
+    #'~/Scripts/tmux/htb-connect'
+    alias webgoat='cd Vagrant/WebGoat/webgoat-images/vagrant-training/ && vagrant up && q'
