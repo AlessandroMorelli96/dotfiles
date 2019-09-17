@@ -1,39 +1,34 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => General
-" => Plugins
-" => Colors and Fonts
-" => Space and Tabs
-" => UI Config
-" => Searcing
-" => Folding
-" => Custom Movements
-" => Custom Leader
-" => CtrlP Settings
-" => Launch Config
-" => Tmux Config
-" => Autogroups
-" => Backups
-" => Custom Functions
-" => Organizations
-" => Visual mode related
-" => Status Line
-" => Window Managment
-" => Custom Mapping
-" => Plugins Settings
+" 1. General
+" 2. Plugins
+" 3. Colors and Fonts
+" 4. Space and Tabs
+" 5. UI Config
+" 6. Searcing
+" 7. Folding
+" 8. Custom Movements
+" 9. Leader Shortcut
+" 10. Backups
+" 11. Custom Functions
+" 12. Status Line
+" 13. Window Managment
+" 14. Custom Mapping
+" 15. NERDTree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => General
+" 1. General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set shell=zsh
+set shell=/bin/zsh
 set title
+
+" With a map leader it's possible to do extra key combinations
+" like <leader>w saves the current file
+let mapleader = ","
 
 " Sets how many lines of history VIM has to remember
 set history=500
-
-" Line Number
-set relativenumber
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -46,7 +41,7 @@ command W w !sudo tee % > /dev/null
 set mouse=a
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Plugins
+" 2. Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Install Vim Plug
@@ -73,19 +68,11 @@ Plug 'Valloric/YouCompleteMe' , { 'do': '/usr/bin/python install.py' }
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Colors and Fonts
+" 3. Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Enable syntax highlighting
 syntax enable
-
-" Set extra options when running in GUI mode
-if has("gui_running")
-    set guioptions-=T
-    set guioptions-=e
-    set t_Co=256
-    set guitablabel=%M\ %t
-endif
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -94,7 +81,7 @@ set encoding=utf8
 set ffs=unix,dos,mac
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Spaces and Tubs
+" 4. Spaces and Tubs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " when indenting with '>', use 4 spaces width
@@ -116,7 +103,7 @@ set ignorecase                     " Make searching case insensitive
 set smartcase                      " Make search sensitive to capital letters
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => UI Config
+" 5. UI Config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Set 7 lines to the cursor - when moving vertically using j/k
@@ -124,6 +111,9 @@ set so=7
 
 " Set numbers of line
 set number
+
+" Line Number
+set relativenumber
 
 " show command in bottom bar
 set showcmd
@@ -134,12 +124,6 @@ set cursorline
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
-
-" Avoid garbled characters in Chinese language windows OS
-let $LANG='en'
-set langmenu=en
-source $VIMRUNTIME/delmenu.vim
-source $VIMRUNTIME/menu.vim
 
 " Visual autocomplete for command menu
 set wildmenu
@@ -165,6 +149,28 @@ set hid
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
+" Don't redraw while executing macros (good performance config)
+set lazyredraw
+
+" For regular expressions turn magic on
+set magic
+
+" Show matching brackets when text indicator is over them
+set showmatch
+
+" Add a bit extra margin to the left
+set foldcolumn=1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 6. Searching
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" search as characters are entered
+set incsearch
+
+" highlight matches
+set hlsearch
+
 " Ignore case when searching
 set ignorecase
 
@@ -177,42 +183,6 @@ set hlsearch
 " Makes search act like search in modern browsers
 set incsearch
 
-" Don't redraw while executing macros (good performance config)
-set lazyredraw
-
-" For regular expressions turn magic on
-set magic
-
-" Show matching brackets when text indicator is over them
-set showmatch
-
-" How many tenths of a second to blink when matching brackets
-set mat=2
-
-" No annoying sound on errors
-set noerrorbells
-set novisualbell
-set t_vb=
-set tm=500
-
-" Properly disable sound on errors on MacVim
-if has("gui_macvim")
-    autocmd GUIEnter * set vb t_vb=
-endif
-
-" Add a bit extra margin to the left
-set foldcolumn=1
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Searching
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" search as characters are entered
-set incsearch
-
-" highlight matches
-set hlsearch
-
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
 
@@ -221,7 +191,7 @@ map <space> /
 map <c-space> ?
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Folding
+" 7. Folding
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " enable folding
@@ -240,7 +210,7 @@ set foldmethod=indent
 set autochdir
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Custom Movements
+" 8. Custom Movements
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " move vertically by visual line
@@ -259,12 +229,8 @@ nnoremap ^ <nop>
 nnoremap gV `[v`]
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Leader Shortcuts
+" 9. Leader Shortcuts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" With a map leader it's possible to do extra key combinations
-" like <leader>w saves the current file
-let mapleader = ","
 
 " Fast saving
 nmap <leader>w :w!<cr>
@@ -275,24 +241,8 @@ nmap <leader>q :q!<cr>
 " jk is escape
 inoremap jk <esc>
 
-" toggle gundo
-nnoremap <leader>u :GundoToggle<CR>
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Launch Config
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" allows cursor change in tmux mode
-if exists('$TMUX')
-    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-else
-    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-endif
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Backup
+" 10. Backup
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Turn backup off, since most stuff is in SVN, git et.c anyway...
@@ -302,7 +252,7 @@ set noswapfile
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Custom Functions
+" 11. Custom Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Returns true if paste mode is enabled
@@ -313,21 +263,8 @@ function! HasPaste()
     return ''
 endfunction
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Organization
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Visual mode related
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Visual mode pressing * or # searches for the current selection
-" Super useful! From an idea by Michael Naumann
-vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
-vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
-
 """"""""""""""""""""""""""""""
-" => Status line
+" 12. Status line
 """"""""""""""""""""""""""""""
 
 " Always show the status line
@@ -336,7 +273,7 @@ set laststatus=2
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
 
 """"""""""""""""""""""""""""""
-" => Window Management
+" 13. Window Management
 """"""""""""""""""""""""""""""
 
 " Split mode
@@ -350,7 +287,7 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 """"""""""""""""""""""""""""""
-" => Custom Mapping
+" 14. Custom Mapping
 """"""""""""""""""""""""""""""
 
 " Copy and paste using system clipboard
@@ -373,7 +310,7 @@ nnoremap à [(
 nnoremap ù ])
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => General
+" 15. NERDTree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " NERDTree
