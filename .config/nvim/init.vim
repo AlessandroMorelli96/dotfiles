@@ -14,31 +14,9 @@
 " 13. Window Managment
 " 14. Custom Mapping
 " 15. NERDTree
+" 16. NCM2
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 1. General
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-set shell=/bin/zsh
-set title
-
-" With a map leader it's possible to do extra key combinations
-" like <leader>w saves the current file
-let mapleader = ","
-
-" Sets how many lines of history VIM has to remember
-set history=500
-
-" Set to auto read when a file is changed from the outside
-set autoread
-
-" :W sudo saves the file
-" (useful for handling the permission-denied error)
-command W w !sudo tee % > /dev/null
-
-" Set mouse
-set mouse=a
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 2. Plugins
@@ -63,10 +41,43 @@ Plug 'scrooloose/nerdtree'
 Plug 'vim-syntastic/syntastic'
 
 " Youcompleteme"
-Plug 'Valloric/YouCompleteMe' , { 'do': '/usr/bin/python install.py' }
+"Plug 'Valloric/YouCompleteMe' , { 'do': '/usr/bin/python install.py' }
 
+" NCM2
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+" NOTE: you need to install completion sources to get completions. Check
+" our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-path'
+
+Plug 'ncm2/ncm2-jedi'
 call plug#end()
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 1. General
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:python3_host_prog="/usr/local/bin/python3"
+set shell=/bin/zsh
+set title
+
+" With a map leader it's possible to do extra key combinations
+" like <leader>w saves the current file
+let mapleader = ","
+
+" Sets how many lines of history VIM has to remember
+set history=500
+
+" Set to auto read when a file is changed from the outside
+set autoread
+
+" :W sudo saves the file
+" (useful for handling the permission-denied error)
+command W w !sudo tee % > /dev/null
+
+" Set mouse
+set mouse=a
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 3. Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -327,3 +338,45 @@ let NERDTreeDirArrows = 1
 " Open NERDTree on current file
 nnoremap <silent> <Leader>v :NERDTreeFind<CR>
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 16. NCM2
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" enable ncm2 for all buffers
+autocmd BufEnter * call ncm2#enable_for_buffer()
+
+" IMPORTANT: :help Ncm2PopupOpen for more information
+set completeopt=noinsert,menuone,noselect
+
+" suppress the annoying 'match x of y', 'The only match' and 'Pattern not
+" found' messages
+set shortmess+=c
+
+" CTRL-C doesn't trigger the InsertLeave autocmd . map to <ESC> instead.
+inoremap <c-c> <ESC>
+    
+" When the <Enter> key is pressed while the popup menu is visible, it only
+" hides the menu. Use this mapping to close the menu and also start a new
+" line.
+inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
+
+" Use <TAB> to select the popup menu:
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" wrap existing omnifunc
+" Note that omnifunc does not run in background and may probably block the
+" editor. If you don't want to be blocked by omnifunc too often, you could
+" add 180ms delay before the omni wrapper:
+"  'on_complete': ['ncm2#on_complete#delay', 180,
+"               \ 'ncm2#on_complete#omni', 'csscomplete#CompleteCSS'],
+au User Ncm2Plugin call ncm2#register_source({
+    \ 'name' : 'css',
+    \ 'priority': 9,
+    \ 'subscope_enable': 1,
+    \ 'scope': ['css','scss'],
+    \ 'mark': 'css',
+    \ 'word_pattern': '[\w\-]+',
+    \ 'complete_pattern': ':\s*',
+    \ 'on_complete': ['ncm2#on_complete#omni', 'csscomplete#CompleteCSS'],
+    \ })

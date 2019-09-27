@@ -1,59 +1,68 @@
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/Cellar/openvpn/2.4.7/sbin:$PATH
-
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-
-#color
-# export TERM="xterm-256color"
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
-
-# Uncomment the following line to use case-sensitive completion.
-CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode zsh-autosuggestions zsh-syntax-highlighting zsh-completions)
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-export LC_CTYPE="en_US.UTF-8"
-export LANG="en_US.UTF-8"
-export LC_ALL="en_US.UTF-8"
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nvim'
-else
-  export EDITOR='nvim'
+if [[ -f "$HOME/.zplugin/bin/zmodules/Src/zdharma/zplugin.so" ]]; then
+    module_path+=( "$HOME/.zplugin/bin/zmodules/Src" )
+    zmodload zdharma/zplugin
 fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+# Useful command similar to xargs
+autoload -U zargs
+
+### Added by Zplugin's installer
+source '/Users/clownfire/.zplugin/bin/zplugin.zsh'
+autoload -Uz _zplugin
+(( ${+_comps} )) && _comps[zplugin]=_zplugin
+
+### End of Zplugin installer's chunk
+
+# THEME
+zplugin light romkatv/powerlevel10k
+
+# PLUGIN
+zplugin light zsh-users/zsh-syntax-highlighting
+zplugin light zsh-users/zsh-history-substring-search
+zplugin light clvv/fasd
+zplugin light junegunn/fzf
+
+# FILE
+source $HOME/.config/zsh/autocomplete.zsh
+source $HOME/.config/zsh/aliases.zsh
+source $HOME/.iterm2_shell_integration.zsh
+[ -f ~/.config/zsh/fzf.zsh ] && source ~/.config/zsh/fzf.zsh
+
+# VARIABLE
+ZDOTDIR=$HOME/.config/zsh
+HISTFILE=$ZDOTDIR/zsh_history
+SAVEHIST=5000
+HISTSIZE=2000
+export EDITOR='nvim'
+fpath=(
+    /usr/local/share/zsh/site-functions
+    /usr/local/share/zsh-completions 
+    $fpath
+)
+
+# OPTION
+setopt AUTO_CD
+setopt LOGIN
+setopt ZLE
+setopt MONITOR
+setopt INTERACTIVE
+setopt EXTENDED_GLOB
+setopt PROMPTSUBST
+setopt NO_CASE_GLOB
+setopt EXTENDED_HISTORY
+setopt SHARE_HISTORY        # share history across multiple zsh sessions
+setopt APPEND_HISTORY       # append to history
+setopt INC_APPEND_HISTORY   # adds commands as they are typed, not at shell exit
+setopt HIST_IGNORE_DUPS     # do not store duplications
+setopt HIST_REDUCE_BLANKS   # removes blank lines from history
+setopt HIST_VERIFY          # make !! simpler
+setopt CORRECT
+setopt CORRECT_ALL
+
+# KEY BINDING
+bindkey '^R' fzf-history-widget
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+

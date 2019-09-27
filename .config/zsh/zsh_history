@@ -1,0 +1,369 @@
+: 1569502908:0;vim .zshrc
+: 1569503366:0;compinit
+: 1569503557:0;vim .zshrc
+: 1569503595:0;cd .config/zsh
+: 1569503596:0;ls
+: 1569503609:0;vim autocomplete.zsh
+: 1569504171:0;vim .zshrc
+: 1569504215:0;cd .config/zsh
+: 1569504216:0;ls
+: 1569504222:0;cd
+: 1569504226:0;fzf
+: 1569504406:0;clear
+: 1569504416:0;echo $PATH
+: 1569504421:0;echo $FPATH
+: 1569504452:0;vim .zshrc
+: 1569504690:0;ls
+: 1569504728:0;vim .zshrc
+: 1569504791:0;cd Projects/dotfiles/zsh/zsh.d
+: 1569504792:0;ls
+: 1569504828:0;pwd
+: 1569504897:0;vim .zshrc
+: 1569504952:0;vim .config/zsh/autocomplete.zsh
+: 1569505137:0;vim .zshrc
+: 1569505339:0;echo $FPATH
+: 1569505361:0;cd /usr/share/zsh/5.3/functions
+: 1569505364:0;la
+: 1569505366:0;ls
+: 1569505432:0;clear
+: 1569505621:0;touch .config/zsh/aliases.zsh
+: 1569505634:0;cd .config/zsh/
+: 1569505636:0;cd
+: 1569505639:0;cd .config/zsh/
+: 1569505651:0;touch aliases.zsh
+: 1569505762:0;vim aliases.zsh
+: 1569505793:0;cd
+: 1569505799:0;cd .config/zsh/
+: 1569505800:0;ls
+: 1569505810:0;rm autocomplete.zsh.copy
+: 1569505821:0;ls
+: 1569505825:0;less zsh_history
+: 1569505831:0;cd
+: 1569505836:0;vim .zshrc
+: 1569505971:0;ls
+: 1569505978:0;c
+: 1569506190:0;q
+: 1569506252:0;ls
+: 1569506258:0;c
+: 1569506279:0;q
+: 1569506372:0;ls
+: 1569506382:0;c
+: 1569506412:0;vim
+: 1569506487:0;ls
+: 1569506499:0;c
+: 1569506500:0;ls
+: 1569507653:0;c
+: 1569507700:0;vim .config/zsh/autocomplete.zsh
+: 1569507735:0;q
+: 1569507757:0;vim .config/zsh/autocomplete.zsh
+: 1569507792:0;q
+: 1569508221:0;cd .config/zsh
+: 1569508236:0;vim prompt.zsh
+: 1569508259:0;c
+: 1569508266:0;ls
+: 1569508508:0;c
+: 1569508509:0;cd
+: 1569508510:0;c
+: 1569508537:0;curl -L https://iterm2.com/shell_integration/zsh -o ~/.iterm2_shell_integration.zsh
+: 1569508540:0;ls
+: 1569508558:0;vim .zshrc
+: 1569508603:0;q
+: 1569508652:0;ls
+: 1569508655:0;q
+: 1569508667:0;vim .zshrc
+: 1569508751:0;ls
+: 1569508766:0;less .zlogin
+: 1569508775:0;rm .zlogin
+: 1569508776:0;ls
+: 1569508862:0;less .zshrc.old
+: 1569508884:0;vim .zshrc
+: 1569508953:0;rm .zshrc.old
+: 1569508958:0;vim .zshrc.copied
+: 1569508977:0;rm .zshrc.copied
+: 1569508979:0;ls
+: 1569508997:0;vim .zprofile
+: 1569509172:0;rm .zprofile
+: 1569509176:0;c
+: 1569509177:0;ls
+: 1569509188:0;vim .chunkwmrc
+: 1569509220:0;rm .chunkwmrc
+: 1569509238:0;vim .zshenv.old
+: 1569509529:0;vim .zshrc
+: 1569509597:0;cp .zplugin .config/zsh/zplugin
+: 1569509610:0;cp -r.zplugin .config/zsh/zplugin
+: 1569509615:0;cp -r .zplugin .config/zsh/zplugin
+: 1569509647:0;cd .config/zsh/zplugin
+: 1569509657:0;cd bin
+: 1569509749:0;ls
+: 1569509761:0;vim .zshrc
+: 1569509847:0;q
+: 1569510103:0;Projects/dotfiles/zsh/zsh.d
+: 1569510104:0;ls
+: 1569510132:0;vim 90_prompt.zsh
+: 1569510192:0;cp 90_prompt.zsh /Users/clownfire/.config/zsh/prompt.zsh
+: 1569510219:0;cp 90_prompt.zsh /Users/clownfire/.config/zsh/prompt.zsh.new
+: 1569510234:0;cd
+: 1569510236:0;cd .config
+: 1569510239:0;cd zsh
+: 1569510252:0;vimdiff prompt.zsh prompt.zsh.new
+: 1569510268:0;vim prompt.zsh
+: 1569510281:0;vim prompt.zsh.new
+: 1569510290:0;vim prompt.zsh
+: 1569510298:0;vim prompt.zsh.new
+: 1569510311:0;rm prompt.zsh.new
+: 1569510314:0;cd
+: 1569510319:0;vim .zshrc
+: 1569510394:0;q
+: 1569510410:0;ls
+: 1569510489:0;rm -rf .zplugin
+: 1569510491:0;ls
+: 1569510492:0;q
+: 1569510527:0;cd .config/zsh/
+: 1569510533:0;vim prompt.zsh
+: 1569510564:0;q
+: 1569510864:0;vim .zshrc
+: 1569510993:0;vim .config/zsh/prompt.zsh
+: 1569511056:0;q
+: 1569511074:0;rm -rf .zplugin
+: 1569511075:0;q
+: 1569511350:0;cd .config/zsh
+: 1569511350:0;ls
+: 1569511356:0;rm -rf zplugin
+: 1569511358:0;cd
+: 1569511366:0;vim .zshrc
+: 1569511394:0;q
+: 1569511437:0;mkdir ~/.zplugin
+: 1569511445:0;git clone https://github.com/zdharma/zplugin.git ~/.zplugin/bin
+: 1569511449:0;q
+: 1569511471:0;vim /Users/clownfire/.config/zsh/prompt.zsh
+: 1569511479:0;q
+: 1569511484:0;ls
+: 1569511486:0;c
+: 1569511632:0;Projects/dotfiles/zsh/
+: 1569511633:0;ls
+: 1569511645:0;vim .zshrc
+: 1569511693:0;cd zplugin
+: 1569511699:0;c
+: 1569511701:0;q
+: 1569511724:0;Projects/dotfiles/zsh/
+: 1569511728:0;cd zsh.d
+: 1569511745:0;vim 20_completion.zsh
+: 1569511797:0;cp 20_completion.zsh /Users/clownfire/.config/zsh/autocomplete.new.zsh
+: 1569511808:0;cd
+: 1569511815:0;vim .zshrc
+: 1569511836:0;rm .zshenv.old
+: 1569511837:0;q
+: 1569511951:0;brew search zsh
+: 1569512084:0;brew install zsh-autosuggestions zsh-completions zsh-git-prompt zsh-history-substring-search zsh-lovers zsh-navigation-tools zsh-syntax-highlighting zshdb
+: 1569512172:0;vim .zshrc
+: 1569523634:0;q
+: 1569523646:0;ls
+: 1569523652:0;c
+: 1569523655:0;q
+: 1569524178:0;.config/zsh/prompt.zsh
+: 1569524181:0;.config/zsh/
+: 1569524187:0;vim prompt.zsh
+: 1569524208:0;zcat
+: 1569524222:0;zcall
+: 1569524238:0;xcalc
+: 1569524495:0;q
+: 1569524513:0;rm -f ~/.zcompdump; compinit
+: 1569524541:0;q
+: 1569524564:0;chmod go-w '/usr/local/share'
+: 1569524566:0;q
+: 1569527082:0;cd .config/zsh
+: 1569527106:0;mv prompt.zsh prompt.zsh.old
+: 1569527107:0;q
+: 1569527126:0;cd .config/zsh
+: 1569527149:0;mv prompt.zsh.old prompt.zsh
+: 1569527156:0;cd
+: 1569527160:0;vim .zshrc
+: 1569527192:0;q
+: 1569527215:0;cd .config/zsh
+: 1569527225:0;vim autocomplete.new.zsh
+: 1569527368:0;rm autocomplete.new.zsh
+: 1569527369:0;q
+: 1569527377:0;vim .zshrc
+: 1569527392:0;q
+: 1569529008:0;cd .config/zsh
+: 1569529014:0;vim prompt.zsh
+: 1569529033:0;mv prompt.zsh prompt.zsh.new
+: 1569529039:0;vim prompt.zsh
+: 1569529059:0;cd
+: 1569529064:0;vim .zshrc
+: 1569529073:0;q
+: 1569529079:0;ls
+: 1569529099:0;vim .config/zsh/prompt.zsh
+: 1569529918:0;q
+: 1569529926:0;vim .config/zsh/prompt.zsh
+: 1569529936:0;q
+: 1569529952:0;vim .config/zsh/prompt.zsh
+: 1569530180:0;vim .zshrc
+: 1569531761:0;q
+: 1569532104:0;vim .zshrc
+: 1569532122:0;q
+: 1569532135:0;cd Projects
+: 1569532143:0;q
+: 1569532332:0;vim .config/zsh/prompt.zsh
+: 1569532344:0;q
+: 1569532484:0;vim .config/zsh/prompt.zsh
+: 1569532503:0;q
+: 1569532596:0;vim .zshrc
+: 1569532622:0;vim .config/zsh/prompt.zsh
+: 1569532651:0;q
+: 1569532844:0;vim .zshrc
+: 1569532856:0;q
+: 1569568717:0;ls
+: 1569568722:0;vim .zshrc
+: 1569568779:0;zplugin --help
+: 1569568817:0;zplugin zstatus
+: 1569568834:0;c
+: 1569568967:0;vim .zshrc
+: 1569569007:0;q
+: 1569569019:0;vim .zshrc
+: 1569569504:0;q
+: 1569571331:0;vv
+: 1569571506:0;echo $en_IT
+: 1569571530:0;vv
+: 1569571564:0;dotfiles grep en_IT
+: 1569571579:0;ack
+: 1569571586:0;cd
+: 1569571592:0;ack en_IT
+: 1569571774:0;vim .local/share/nvim/shada/main.shada
+: 1569571829:0;vv
+: 1569571879:0;q
+: 1569571899:0;vv
+: 1569571949:0;locale -a
+: 1569571965:0;locale -a | grep en_IT
+: 1569571980:0;echo $LANG
+: 1569571994:0;locale -a | grep -i it
+: 1569572158:0;vv
+: 1569572184:0;vim -u
+: 1569572196:0;vim -u /dev/null
+: 1569572215:0;ls
+: 1569572239:0;q
+: 1569572366:0;echo $LC_CTYPE
+: 1569572395:0;echo $LC_ALL
+: 1569572413:0;brew list
+: 1569572561:0;brew remove adwaita-icon-theme
+: 1569572982:0;brew info cairo
+: 1569573373:0;brew list
+: 1569573383:0;brew remove cairo
+: 1569573415:0;brew remove cowsay
+: 1569573454:0;brew remove ettercap
+: 1569573477:0;brew info fasd
+: 1569573515:0;fasd
+: 1569573520:0;fasd --help
+: 1569573650:0;v .zsh
+: 1569573699:0;fasd
+: 1569573707:0;fasd --help
+: 1569573723:0;fasd -s
+: 1569573806:0;vz
+: 1569573826:0;q
+: 1569573844:0;v .zsh
+: 1569573851:0;q
+: 1569573855:0;v .zsh
+: 1569573858:0;q
+: 1569573868:0;fsd
+: 1569573870:0;fasd
+: 1569573873:0;fasd --help
+: 1569573882:0;brew remove fasd
+: 1569573887:0;ls
+: 1569573889:0;c
+: 1569573893:0;brew list
+: 1569573945:0;brew remove zsh-*
+: 1569574012:0;brew remove zsh-autosuggestions zsh-completions zsh-git-prompt zsh-history-substring-search zsh-lovers zsh-navigation-tools zsh-syntax-highlighting
+: 1569574025:0;brew --help
+: 1569574052:0;brew remove --help
+: 1569574066:0;brew cleanup --help
+: 1569574082:0;brew cleanup
+: 1569574238:0;brew update
+: 1569574285:0;brew upgrade
+: 1569574364:0;dotfiles commit
+: 1569574383:0;q
+: 1569574547:0;echo 'export PATH="/usr/local/opt/openssl/bin:$PATH"' >> ~/.zshrc
+: 1569574548:0;q
+: 1569574551:0;c
+: 1569574554:0;brew list
+: 1569574572:0;brew info fd
+: 1569574689:0;vz
+: 1569574730:0;q
+: 1569574738:0;brew list
+: 1569574752:0;brew info fontconfig
+: 1569574774:0;brew rm fontconfig
+: 1569574792:0;brew info fortune
+: 1569574808:0;c
+: 1569574811:0;Projects
+: 1569574815:0;ls
+: 1569574832:0;scripts
+: 1569574833:0;ls
+: 1569574835:0;cd setUpMachines
+: 1569574954:0;c
+: 1569575327:0;ls
+: 1569575352:0;vim installToolsMac.sh
+: 1569575366:0;brew list
+: 1569575592:0;brew rm fzf
+: 1569575607:0;vz
+: 1569575943:0;q
+: 1569576073:0;c
+: 1569576080:0;.config/zsh
+: 1569576081:0;ls
+: 1569576093:0;rm prompt.zsh prompt.zsh.new
+: 1569576095:0;q
+: 1569576101:0;.config/zsh
+: 1569576112:0;vim functions.zsh
+: 1569576125:0;vz
+: 1569576179:0;q
+: 1569576219:0;vz
+: 1569576250:0;q
+: 1569576308:0;c
+: 1569576334:0;Projects/dotfiles/zsh/
+: 1569576340:0;vim .zshrc
+: 1569576364:0;va
+: 1569576368:0;vz
+: 1569576391:0;.config/zsh
+: 1569576392:0;l
+: 1569576396:0;ll
+: 1569576397:0;ls
+: 1569576567:0;.config/zsh
+: 1569576568:0;ls
+: 1569576575:0;vim functions.zsh
+: 1569576589:0;q
+: 1569576610:0;vz
+: 1569576633:0;fzf
+: 1569576645:0;brew install fzf
+: 1569576657:0;q
+: 1569576679:0;vz
+: 1569576687:0;q
+: 1569576710:0;vz
+: 1569576735:0;q
+: 1569576745:0;fzf
+: 1569576751:0;a
+: 1569576760:0;.config/zsh
+: 1569576765:0;rm functions.zsh
+: 1569576766:0;ls
+: 1569576769:0;vz
+: 1569576916:0;qq
+: 1569576917:0;q
+: 1569576931:0;vz
+: 1569576940:0;q
+: 1569577086:0;bindkey | grep fzf
+: 1569577209:0;fzf
+: 1569577234:0;ack
+: 1569577243:0;ack fzf
+: 1569577348:0;q
+: 1569577351:0;(brew --prefix)/opt/fzf/install
+: 1569577370:0;brew --prefix
+: 1569577405:0;cd /usr/local/opt/fzf
+: 1569577410:0;./install
+: 1569577462:0;q
+: 1569577487:0;vim .zshrc
+: 1569577575:0;ls
+: 1569577611:0;mv .fzf.zsh .config/zsh/fzf.zsh
+: 1569577614:0;vz
+: 1569577828:0;vim Projects/scripts/setUpMachines/installToolsMac.sh
+: 1569578016:0;brew list
+: 1569578295:0;q
+: 1569578298:0;cd
+: 1569578305:0;dotfiles status
+: 1569578329:0;dotfiles add .config/zsh/*
