@@ -24,9 +24,10 @@ zplugin light junegunn/fzf
 
 # FILE
 source $HOME/.config/zsh/autocomplete.zsh
+source $HOME/.config/zsh/p10k.zsh
 source $HOME/.config/zsh/aliases.zsh
+source $HOME/.config/zsh/fzf.zsh
 source $HOME/.iterm2_shell_integration.zsh
-[ -f ~/.config/zsh/fzf.zsh ] && source ~/.config/zsh/fzf.zsh
 
 # VARIABLE
 ZDOTDIR=$HOME/.config/zsh

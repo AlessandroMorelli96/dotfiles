@@ -367,3 +367,312 @@
 : 1569578298:0;cd
 : 1569578305:0;dotfiles status
 : 1569578329:0;dotfiles add .config/zsh/*
+: 1569578339:0;dotfiles add .zshrc
+: 1569578373:0;dotfiles add .gitconfig
+: 1569578393:0;dotfiles add .tmux.conf
+: 1569578412:0;dotfiles add .config/nvim/init.vim
+: 1569578417:0;dotfiles commit
+: 1569578461:0;Projects/scripts/setUpMachines
+: 1569578467:0;git status
+: 1569578472:0;git add *
+: 1569578476:0;git commit
+: 1569578488:0;git push
+: 1569578495:0;cd
+: 1569578502:0;dotfiles push
+: 1569578553:0;vim .p10k.zsh
+: 1569578617:0;mv .p10k.zsh .config/zsh
+: 1569578622:0;vz
+: 1569578642:0;q
+: 1569578679:0;ls
+: 1569578692:0;cd .config
+: 1569578696:0;cd zsh
+: 1569578745:0;mv .p10k.zsh p10k.zsh
+: 1569578751:0;ls
+: 1569578767:0;vz
+: 1569578897:0;q
+: 1569595511:0;Projects/scripts/setUpMachines/installToolsMac.sh
+: 1569595522:0;vim Projects/scripts/setUpMachines/installToolsMac.sh
+: 1569595530:0;brew list
+: 1569597292:0;fd
+: 1569597305:0;man fd
+: 1569597327:0;c
+: 1569598290:0;Projects
+: 1569598291:0;ls
+: 1569598299:0;cd bullsoc.com
+: 1569598304:0;git status
+: 1569598397:0;vim .firebaserc
+: 1569598413:0;vim .gitignore
+: 1569598451:0;git status
+: 1569598471:0;git add config.toml
+: 1569598485:0;git add .gitignore
+: 1569598502:0;cd content
+: 1569598503:0;ls
+: 1569598516:0;git add content
+: 1569598537:0;git add content/about.md
+: 1569598542:0;cd..
+: 1569598556:0;git add content/about.md
+: 1569598561:0;git status
+: 1569598595:0;git add .firebaserc
+: 1569598621:0;git add resources/_gen/assets/scss/scss/coder-inverted.scss_04ee73840c478ec5da36b8c7c8119ac2.content
+: 1569598629:0;git add resources/_gen/assets/scss/scss/coder-inverted.scss_04ee73840c478ec5da36b8c7c8119ac2.json
+: 1569598633:0;git status
+: 1569598705:0;git rm --cached public
+: 1569598715:0;git rm -r --cached public
+: 1569598724:0;vim .gitignore
+: 1569598744:0;git commit -a
+: 1569598768:0;git status
+: 1569598774:0;q
+: 1569598905:0;Projects/bullsoc.com
+: 1569598927:0;git push
+: 1569598960:0;cd .git/
+: 1569598964:0;vim config
+: 1569599038:0;cd..
+: 1569599041:0;git push
+: 1569599063:0;vim .gitconfig
+: 1569599070:0;ls
+: 1569599081:0;cd .git
+: 1569599084:0;vim config
+: 1569599114:0;cd
+: 1569599117:0;cd .ssh
+: 1569599122:0;cd..
+: 1569599138:0;git push
+: 1569599159:0;git pull
+: 1569599182:0;git status
+: 1569599189:0;git push
+: 1569599243:0;cd..
+: 1569599247:0;cd morelli.dev
+: 1569599252:0;git status
+: 1569599281:0;git rm -r --cached public
+: 1569599318:0;vim .gitignore
+: 1569599347:0;git add .gitignore
+: 1569599360:0;git add .firebaserc
+: 1569599367:0;git add config.toml
+: 1569599382:0;git add content/
+: 1569599390:0;git add resources/
+: 1569599395:0;git status
+: 1569599421:0;git add archetypes
+: 1569599444:0;git add firebase.json static/
+: 1569599452:0;vim config.toml
+: 1569599468:0;cd themes
+: 1569599475:0;rm -rf hugo-coder-portfolio
+: 1569599477:0;cd..
+: 1569599480:0;c
+: 1569599484:0;git status
+: 1569599499:0;git commit -a
+: 1569599523:0;git push
+: 1569599545:0;cd .git
+: 1569599547:0;vim config
+: 1569599650:0;git remote add origin https://github.com/AlessandroMorelli96/morelli.dev.git
+: 1569599706:0;git git push
+: 1569599715:0;cd..
+: 1569599719:0;git push
+: 1569599727:0;git push --set-upstream origin master
+: 1569599837:0;cd..
+: 1569599865:0;cd DayDiscounts
+: 1569599869:0;cd .git
+: 1569599872:0;vim config
+: 1569599886:0;cd..
+: 1569599900:0;cd Shodan
+: 1569599910:0;cd..
+: 1569599922:0;cd trojan
+: 1569599932:0;git status
+: 1569599940:0;git add git_trojan.py
+: 1569599947:0;git commit -a
+: 1569599962:0;git push
+: 1569599980:0;cd..
+: 1569599995:0;cd Shodan
+: 1569600063:0;git init
+: 1569600090:0;vim .gitignore
+: 1569600098:0;Projects/Shodan
+: 1569600098:0;ls
+: 1569600111:0;git add Shodan.py
+: 1569600118:0;git add myApi.py
+: 1569600121:0;vim data.json
+: 1569600144:0;git add data.json
+: 1569600148:0;git status
+: 1569600176:0;git rm -r --cached .idea
+: 1569600195:0;git rm -r --cached venv
+: 1569600209:0;git rm --cached venv
+: 1569600214:0;git rm --cached venv/
+: 1569600216:0;git rm --cached venv/*
+: 1569600231:0;git commit
+: 1569600242:0;git push
+: 1569600277:0;git remote add origin https://github.com/AlessandroMorelli96/shodan.git
+: 1569600301:0;git push --set-upstream origin master
+: 1569600325:0;cd..
+: 1569600328:0;cd WhatsApp
+: 1569600330:0;ls
+: 1569600333:0;ls -hal
+: 1569600338:0;cd ..
+: 1569600348:0;cd scripts
+: 1569600351:0;cd setUpMachines
+: 1569600358:0;cd..
+: 1569600359:0;cd,,
+: 1569600360:0;cd..
+: 1569600367:0;cd ctf
+: 1569600368:0;ls
+: 1569600375:0;git status
+: 1569600380:0;cd HackTheBox
+: 1569600387:0;cd ..
+: 1569600702:0;cd HackTheBox
+: 1569600715:0;cd Eat\ the\ Cake\!
+: 1569600721:0;cd ..
+: 1569600730:0;cd Took\ the\ Byte
+: 1569600737:0;vim took\ the\ byte.go
+: 1569600774:0;cd ..
+: 1569600779:0;cd 2013-BIN-50
+: 1569600784:0;:q
+: 1569600788:0;cd..
+: 1569600793:0;cd Eat\ the\ Cake\!
+: 1569600798:0;cd ..
+: 1569600803:0;cd Networking
+: 1569600808:0;vim README.md
+: 1569600828:0;cd ..
+: 1569600837:0;cd harekazeCTF
+: 1569600842:0;cd once\ upon\ a\ time
+: 1569600853:0;vim result.txt
+: 1569600871:0;cd ..
+: 1569600890:0;cd WhatsApp
+: 1569600892:0;ls
+: 1569600895:0;cd ..
+: 1569600905:0;cd scripts
+: 1569600913:0;cd..
+: 1569600919:0;cd trojan
+: 1569600936:0;git status
+: 1569600958:0;git add config/*
+: 1569600969:0;git add data/*
+: 1569600979:0;git add exe/*
+: 1569600993:0;git add modules/*
+: 1569600997:0;git status
+: 1569601020:0;git commit
+: 1569601353:0;cd ..
+: 1569601358:0;cd scripts
+: 1569601361:0;cd ..
+: 1569601380:0;cd Documents
+: 1569601418:0;cd Risorse
+: 1569601428:0;cd The\ Art\ of\ Exploitation
+: 1569601435:0;cd booksrc
+: 1569601444:0;cd..
+: 1569601451:0;cd Hacking\ The\ Art\ of\ Exploitation\ 2nd\ Edition\ Jon\ Erickson\ Official\ LiveCD\ ISO\ No\ Starch\ Press
+: 1569601457:0;cd ..
+: 1569601475:0;cd Docker/
+: 1569601573:0;git init
+: 1569601601:0;git remote add origin https://github.com/AlessandroMorelli96/dockers.git
+: 1569601612:0;git status
+: 1569601620:0;git add debian
+: 1569601633:0;git add hackTheDock/ kali
+: 1569601637:0;git add hackTheDock/
+: 1569601649:0;tree
+: 1569601688:0;git add *
+: 1569601819:0;cd hackTheDock
+: 1569601823:0;cd .git
+: 1569601827:0;vim config
+: 1569601988:0;cd ..
+: 1569601991:0;cd..
+: 1569602003:0;cd CTF
+: 1569602006:0;cd Crypto
+: 1569602011:0;vim Crypto101.pdf
+: 1569602020:0;cd..
+: 1569602038:0;cd WritesUpMine
+: 1569602043:0;git status
+: 1569602056:0;git add WebGoat/WebGoat.md
+: 1569602087:0;git add WebGoat/Authentication\ Flaws/Authentication\ Bypass/writeUp.md
+: 1569602091:0;git status
+: 1569602100:0;git commit
+: 1569602116:0;git push
+: 1569602124:0;cd..
+: 1569602130:0;cd WriteUp
+: 1569602270:0;git status
+: 1569602290:0;git add HackTheBox/Machines/SwagShop/
+: 1569602299:0;git add Riunione/
+: 1569602323:0;git commit
+: 1569602345:0;git push
+: 1569602358:0;q
+: 1569602585:0;cd Vagrant
+: 1569602597:0;git init
+: 1569602649:0;git remote add origin https://github.com/AlessandroMorelli96/vagrant.git
+: 1569602661:0;git status
+: 1569602671:0;git add WebGoat/
+: 1569602720:0;c
+: 1569602724:0;git status
+: 1569602742:0;git add WebGoat/
+: 1569602751:0;cd WebGoat
+: 1569602756:0;cd..
+: 1569602768:0;git add kali-ctf/
+: 1569602773:0;git add kali-test/
+: 1569602780:0;git add ubuntuDev/
+: 1569602787:0;git status
+: 1569602798:0;git commit
+: 1569602818:0;git status
+: 1569602843:0;git push --set-upstream origin master
+: 1569602956:0;history
+: 1569603633:0;cd..
+: 1569603845:0;cd Documents
+: 1569603860:0;cd Risorse
+: 1569603864:0;cd Docker
+: 1569603903:0;git status
+: 1569603925:0;git add python/Dockerfile
+: 1569603939:0;git status
+: 1569603947:0;git add kali/Dockerfile
+: 1569603957:0;cd kali
+: 1569603965:0;git add Dockerfile
+: 1569603970:0;vim Dockerfile
+: 1569603990:0;cd..
+: 1569603997:0;vz
+: 1569604000:0;va
+: 1569604033:0;q
+: 1569604044:0;rm -r kali
+: 1569604057:0;ls
+: 1569604064:0;rm -rf kali
+: 1569604153:0;ls
+: 1569604156:0;cd hackTheDock
+: 1569604159:0;cd kali
+: 1569604162:0;vim Dockerfile
+: 1569604168:0;cd ..
+: 1569604185:0;rm -rf hackTheDock
+: 1569604205:0;ls
+: 1569604265:0;sudo chown *
+: 1569604277:0;ls
+: 1569604284:0;sudo chown clownfire *
+: 1569604286:0;ls
+: 1569604304:0;cd hackTheDock/kali
+: 1569604307:0;vim Dockerfile
+: 1569604316:0;cd ../..
+: 1569604331:0;rm -rf hackTheDock
+: 1569604339:0;sudo rm -rf hackTheDock
+: 1569604341:0;ls
+: 1569604354:0;cd debian
+: 1569604360:0;cd ..
+: 1569604385:0;git status
+: 1569604394:0;git push
+: 1569604399:0;git push --set-upstream origin master
+: 1569604451:0;git remote add origin https://github.com/AlessandroMorelli96/dockers.git
+: 1569604455:0;git push --set-upstream origin master
+: 1569604572:0;ls
+: 1569604587:0;cd debian
+: 1569604614:0;cd..
+: 1569604619:0;sudo chown -R *
+: 1569604635:0;sudo chown -R clownfire *
+: 1569604637:0;ls
+: 1569604642:0;cd debian
+: 1569604644:0;cd..
+: 1569604649:0;git push
+: 1569604654:0;git push --set-upstream origin master
+: 1569604691:0;c
+: 1569604722:0;git commit -m "Update"
+: 1569604730:0;git push --set-upstream origin master
+: 1569604740:0;q
+: 1569605885:0;cd
+: 1569605942:0;cd Scripts/tmux
+: 1569605945:0;vim htb-connect
+: 1569607068:0;va
+: 1569607610:0;q
+: 1569684828:0;kali
+: 1569686978:0;dotfiles commit
+: 1569686985:0;vz
+: 1569687101:0;vv
+: 1569687171:0;q
+: 1569687204:0;vim
+: 1569687224:0;dotfiles commit
+: 1569687260:0;dotfiles add .config/nvim/init.vim
+: 1569687274:0;dotfiles add .config/zsh/zsh_history

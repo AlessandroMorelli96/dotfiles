@@ -81,8 +81,11 @@ ii() {
 }
 
 #   ---------------------------------------
-#   5.  DOCKER
+#   5.  VAGRANT
 #   ---------------------------------------
+
+alias vup='vagrant up'
+alias vha='vagrant halt'
 
 #   ---------------------------------------
 #   6.  PROGRAMS
@@ -102,3 +105,11 @@ alias vimdiff='nvim -d'
 alias htb-connect='tmux new-session \; split-window -v \; split-window -h \; send-keys 'sudo openvpn ~/Downloads/LiquidNitrogen.ovpn' C-m \; '
 #'~/Scripts/tmux/htb-connect'
 alias webgoat='cd Vagrant/WebGoat/webgoat-images/vagrant-training/ && vagrant up && q'
+
+
+#   --------------------------------------
+#   8. File
+#   --------------------------------------
+
+alias -s git='git clone'
+alias -s text='vim'
