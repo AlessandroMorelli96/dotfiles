@@ -5,7 +5,7 @@
 alias sz='source $HOME/.zshrc'
 alias sa='source $HOME/.oh-my-zsh/custom/aliases.zsh'
 alias vv='vim $HOME/.config/nvim/init.vim'
-alias va='vim $HOME/.oh-my-zsh/custom/aliases.zsh'
+alias va='vim $HOME/.config/zsh/aliases.zsh'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias vz='vim $HOME/.zshrc'
 
@@ -13,6 +13,8 @@ alias vz='vim $HOME/.zshrc'
 #   2.  MAKE TERMINAL BETTER
 #   -----------------------------
 
+
+alias pw="fzf --preview 'bat --color \"always\" {}'"    # fzf preview
 alias q='exit'
 alias ls='ls -FGlAhp'
 alias cp='cp -iv'                           # Preferred 'cp' implementation
@@ -81,8 +83,11 @@ ii() {
 }
 
 #   ---------------------------------------
-#   5.  DOCKER
+#   5.  VAGRANT
 #   ---------------------------------------
+
+alias vup='vagrant up'
+alias vhalt='vagrant halt'
 
 #   ---------------------------------------
 #   6.  PROGRAMS
@@ -102,3 +107,11 @@ alias vimdiff='nvim -d'
 alias htb-connect='tmux new-session \; split-window -v \; split-window -h \; send-keys 'sudo openvpn ~/Downloads/LiquidNitrogen.ovpn' C-m \; '
 #'~/Scripts/tmux/htb-connect'
 alias webgoat='cd Vagrant/WebGoat/webgoat-images/vagrant-training/ && vagrant up && q'
+
+
+#   --------------------------------------
+#   8. File
+#   --------------------------------------
+
+alias -s git='git clone'
+alias -s text='vim'

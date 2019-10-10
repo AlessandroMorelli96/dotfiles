@@ -34,6 +34,9 @@ ZDOTDIR=$HOME/.config/zsh
 HISTFILE=$ZDOTDIR/zsh_history
 SAVEHIST=5000
 HISTSIZE=2000
+export FZF_COMPLETION_TRIGGER='~~'
+export FZF_COMPLETION_OPTS='+c -x'
+export PATH="/usr/local/Cellar/openvpn/2.4.7_1/sbin:$PATH"
 export EDITOR='nvim'
 fpath=(
     /usr/local/share/zsh/site-functions
@@ -66,4 +69,3 @@ bindkey '^R' fzf-history-widget
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 export PATH="/usr/local/opt/openssl/bin:$PATH"
-

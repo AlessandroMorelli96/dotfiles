@@ -34,6 +34,10 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-sensible'
 
+" FZF
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+
 " Better commit editor
 Plug 'rhysd/committia.vim'
 
@@ -43,9 +47,6 @@ Plug 'scrooloose/nerdtree'
 " syntastic"
 Plug 'vim-syntastic/syntastic'
 
-" Youcompleteme"
-"Plug 'Valloric/YouCompleteMe' , { 'do': '/usr/bin/python install.py' }
-
 " NCM2
 Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
@@ -53,7 +54,7 @@ Plug 'roxma/nvim-yarp'
 " our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
-
+Plug 'ncm2/ncm2-markdown-subscope'
 Plug 'ncm2/ncm2-jedi'
 call plug#end()
 

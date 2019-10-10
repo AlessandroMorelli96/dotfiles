@@ -5,3 +5,5 @@
 	email = amorelli96@gmail.com
 [merge]
     tool = vimdiff
+[gui]
+	recentrepo = /Users/clownfire/Projects/morelli.dev
