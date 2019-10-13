@@ -7,7 +7,7 @@ fi
 autoload -U zargs
 
 ### Added by Zplugin's installer
-source '/Users/clownfire/.zplugin/bin/zplugin.zsh'
+source $HOME/.zplugin/bin/zplugin.zsh
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 
@@ -27,11 +27,13 @@ source $HOME/.config/zsh/autocomplete.zsh
 source $HOME/.config/zsh/p10k.zsh
 source $HOME/.config/zsh/aliases.zsh
 source $HOME/.config/zsh/fzf.zsh
+source $HOME/.config/zsh/p10k.zsh                           # To customize prompt, run "p10k configure"
+for file in $HOME/.config/zsh/functions/*; source $file     # Functions
 source $HOME/.iterm2_shell_integration.zsh
 
 # VARIABLE
 ZDOTDIR=$HOME/.config/zsh
-HISTFILE=$ZDOTDIR/zsh_history
+HISTFILE=$HOME/.config/zsh/zsh_history
 SAVEHIST=5000
 HISTSIZE=2000
 export FZF_COMPLETION_TRIGGER='~~'
@@ -66,6 +68,4 @@ setopt CORRECT_ALL
 # KEY BINDING
 bindkey '^R' fzf-history-widget
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 export PATH="/usr/local/opt/openssl/bin:$PATH"
