@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh -f
+
+# Last downloaded file
+ldf() {
+    local file=~/Downloads/$(ls -1t ~/Downloads/ | head -n1)
+    echo "$file"
+    mv "$file" .
+}
