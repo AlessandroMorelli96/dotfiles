@@ -6,7 +6,7 @@ alias sz='source $HOME/.zshrc'
 alias sa='source $HOME/.oh-my-zsh/custom/aliases.zsh'
 alias vv='vim $HOME/.config/nvim/init.vim'
 alias va='vim $HOME/.config/zsh/aliases.zsh'
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias vz='vim $HOME/.zshrc'
 
 #   -----------------------------
