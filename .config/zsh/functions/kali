@@ -1,0 +1,21 @@
+#!/usr/local/bin/zsh
+
+# Kali
+function kali() {
+    location=$VIRTUALMACHINES/KALI\ KDE.vmwarevm/Kali\ KDE.vmx
+    case $1 in
+        start)
+            vmrun -T fusion start $location nogui
+            ssh clownfire@$(vmrun -T fusion getGuestIPAddress $location -wait)
+            ;;
+        stop)
+            vmrun -T fusion stop $location soft
+            ;;
+        snap)
+            vmrun -T fusion listSnapshots $location showtree
+            ;;
+        *)
+            echo "ERRORE"
+            ;;
+    esac
+}
