@@ -24,12 +24,13 @@ zplugin light junegunn/fzf
 
 # FILE
 source $HOME/.config/zsh/autocomplete.zsh
-source $HOME/.config/zsh/p10k.zsh
 source $HOME/.config/zsh/aliases.zsh
 source $HOME/.config/zsh/fzf.zsh
 source $HOME/.config/zsh/p10k.zsh                           # To customize prompt, run "p10k configure"
 for file in $HOME/.config/zsh/functions/*; source $file     # Functions
-source $HOME/.iterm2_shell_integration.zsh
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    source $HOME/.iterm2_shell_integration.zsh
+fi
 
 # VARIABLE
 ZDOTDIR=$HOME/.config/zsh
@@ -45,6 +46,12 @@ fpath=(
     /usr/local/share/zsh-completions 
     $fpath
 )
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    JAVA_HOME=/usr/lib/jvm/default-java
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    VIRTUALMACHINES=$HOME/Virtual\ Machines.localized/
+fi
+
 
 # OPTION
 setopt AUTO_CD
@@ -68,4 +75,8 @@ setopt CORRECT_ALL
 # KEY BINDING
 bindkey '^R' fzf-history-widget
 
+# PATH
 export PATH="/usr/local/opt/openssl/bin:$PATH"
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    export PATH="$HOME/opt/bin:$PATH"
+fi

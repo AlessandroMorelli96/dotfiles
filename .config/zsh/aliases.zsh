@@ -3,7 +3,7 @@
 #   -----------------------------
 
 alias sz='source $HOME/.zshrc'
-alias sa='source $HOME/.oh-my-zsh/custom/aliases.zsh'
+alias sa='source $HOME/.config/zsh/aliases.zsh'
 alias vv='vim $HOME/.config/nvim/init.vim'
 alias va='vim $HOME/.config/zsh/aliases.zsh'
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -13,8 +13,6 @@ alias vz='vim $HOME/.zshrc'
 #   2.  MAKE TERMINAL BETTER
 #   -----------------------------
 
-alias objdump='objdump -M Intel'
-alias gdb='gdb -q'
 alias pw="fzf --preview 'bat --color \"always\" {}'"    # fzf preview
 alias q='exit'
 alias ls='ls -FGlAhp'
@@ -23,12 +21,16 @@ alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
 alias less='less -FSRXc'                    # Preferred 'less' implementation
 alias c='clear'                             # c:            Clear terminal display
-alias which='type --all'                    # which:        Find executables
+#alias which='type --all'                    # which:        Find executables
 alias path='echo -e ${PATH//:/\\n}'         # path:         Echo all executable Paths
 alias show_options='shopt'                  # Show_options: display bash options settings
 alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
 alias ..='cd ../'                           # Go back 1 directory level
 alias d='dirs -v | head -10'
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    alias objdump='objdump -M Intel'
+    alias gdb='gdb -q'
+fi
 
 #   ---------------------------
 #   3.  PROCESS MANAGEMENT
@@ -55,25 +57,28 @@ alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rul
 #   5.  VAGRANT
 #   ---------------------------------------
 
-alias vup='vagrant up'
-alias vhalt='vagrant halt'
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    alias vup='vagrant up'
+    alias vhalt='vagrant halt'
+fi
 
 #   ---------------------------------------
 #   6.  PROGRAMS
 #   ---------------------------------------
 
-alias kali='cd ~/Vagrant/kali-ctf; export DISPLAY=:0 && vagrant up && vagrant ssh'
-alias update='brew update && brew upgrade'
 alias vim='nvim'
-alias proxychains='proxychains4'
 alias vimdiff='nvim -d'
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    alias update='brew update && brew upgrade && brew cask upgrade'
+    alias proxychains='proxychains4'
+fi
 
 #   ---------------------------------------
 #   7.  TMUX
 #   ---------------------------------------
 
 alias htb-connect='tmux new-session \; split-window -v \; split-window -h \; send-keys 'sudo openvpn ~/Downloads/LiquidNitrogen.ovpn' C-m \; '
-alias webgoat='cd Vagrant/WebGoat/webgoat-images/vagrant-training/ && vagrant up && q'
+#alias webgoat='cd Vagrant/WebGoat/webgoat-images/vagrant-training/ && vagrant up && q'
 
 #   --------------------------------------
 #   8. File

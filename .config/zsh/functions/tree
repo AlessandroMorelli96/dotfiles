@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh -f
+#!/usr/local/bin/zsh
 
 # Better tree visualization
 function tre() {

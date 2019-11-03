@@ -1,5 +1,7 @@
-#!/usr/bin/env zsh -f
-function checksum(){
+#!/usr/loca/bin/zsh
+
+# Calculate checksum
+function checksum() {
     if [ -f "$1" ]; then
     basename $1 | sed -e "s/\(.*\)/\1 \\\/"
     md5 $1 | sed -e "s/^MD5.*=/md5/" | sed -e "s/\(.*\)/\1 \\\/"

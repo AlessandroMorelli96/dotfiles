@@ -1,4 +1,7 @@
-function mcd(){
+#!/usr/local/bin/zsh
+
+# Makedir and cd
+function mcd() {
     mkdir -p $1
     cd $1
 }

@@ -1,4 +1,7 @@
-function cd(){
+#!/usr/local/bin/zsh
+
+# CD
+function cd() {
     builtin cd $@;
     ls
 }

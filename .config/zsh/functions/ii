@@ -1,3 +1,5 @@
+#!/usr/local/bin/zsh
+
 # ii:  display useful host related informaton
 function ii() {
     echo -e "\nYou are logged on ${RED}$HOST"

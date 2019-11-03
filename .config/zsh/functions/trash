@@ -1,3 +1,6 @@
-function trash(){
+#!/usr/local/bin/zsh
+
+# Move to Trash
+function trash() {
     mv $@ $HOME/.Trash
 }
