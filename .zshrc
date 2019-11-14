@@ -17,10 +17,13 @@ autoload -Uz _zplugin
 zplugin light romkatv/powerlevel10k
 
 # PLUGIN
+zplugin light zsh-users/zsh-autosuggestions
 zplugin light zsh-users/zsh-syntax-highlighting
 zplugin light zsh-users/zsh-history-substring-search
 zplugin light clvv/fasd
 zplugin light junegunn/fzf
+zplugin ice as"program" atclone"rm -f src/auto/config.cache; ./configure" atpull"%atclone" make pick"src/vim"
+zplugin light vim/vim
 
 # FILE
 source $HOME/.config/zsh/autocomplete.zsh
@@ -37,6 +40,7 @@ ZDOTDIR=$HOME/.config/zsh
 HISTFILE=$HOME/.config/zsh/zsh_history
 SAVEHIST=5000
 HISTSIZE=2000
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 export FZF_COMPLETION_TRIGGER='~~'
 export FZF_COMPLETION_OPTS='+c -x'
 export PATH="/usr/local/Cellar/openvpn/2.4.7_1/sbin:$PATH"
@@ -78,5 +82,7 @@ bindkey '^R' fzf-history-widget
 # PATH
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
-    export PATH="$HOME/opt/bin:$PATH"
-fi
+    export PATH="$HOME/go/bin:$HOME/opt/bin:$PATH"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    export PATH="/usr/local/sbin:$PATH"
+fi 

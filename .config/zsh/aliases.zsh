@@ -27,6 +27,10 @@ alias show_options='shopt'                  # Show_options: display bash options
 alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
 alias ..='cd ../'                           # Go back 1 directory level
 alias d='dirs -v | head -10'
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    alias top='htop'
+    alias cat='bat'                             # A cat(1) clone with syntax highlighting and Git integration.
+fi
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     alias objdump='objdump -M Intel'
     alias gdb='gdb -q'

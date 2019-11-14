@@ -2,10 +2,19 @@
 
 # Kali
 function kali() {
-    location=$VIRTUALMACHINES/KALI\ KDE.vmwarevm/Kali\ KDE.vmx
+    location=$VIRTUALMACHINES/KaliLight.vmwarevm/KaliLight.vmx
     case $1 in
+        copyfrom)
+            scp clownfire@$(vmrun -T fusion getGuestIPAddress $location -wait):$2 $3
+            ;;
+        copyto)
+            scp $2 clownfire@$(vmrun -T fusion getGuestIPAddress $location -wait):$3
+            ;;
         start)
             vmrun -T fusion start $location nogui
+            ssh clownfire@$(vmrun -T fusion getGuestIPAddress $location -wait)
+            ;;
+        ssh)
             ssh clownfire@$(vmrun -T fusion getGuestIPAddress $location -wait)
             ;;
         stop)
@@ -13,6 +22,12 @@ function kali() {
             ;;
         snap)
             vmrun -T fusion listSnapshots $location showtree
+            ;;
+        save)
+            vmrun -T fusion snapshot $location $2
+            ;;
+        restore)
+            vmrun -T fusion revertToSnapshot $location $2
             ;;
         *)
             echo "ERRORE"
