@@ -54,6 +54,11 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     JAVA_HOME=/usr/lib/jvm/default-java
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     VIRTUALMACHINES=$HOME/Virtual\ Machines.localized/
+    export GOPATH=${HOME}/.go
+    export GOROOT=$(brew --prefix golang)
+    export LDFLAGS="-L/usr/local/opt/binutils/lib"
+    export CPPFLAGS="-I/usr/local/opt/binutils/include"
+    export DYLD_LIBRARY_PATH="/usr/local/opt/unicorn/lib/"
 fi
 
 
@@ -84,5 +89,5 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     export PATH="$HOME/go/bin:$HOME/opt/bin:$PATH"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-    export PATH="/usr/local/sbin:$PATH"
+    export PATH="/usr/local/sbin:$GOPATH/bin:$GOROOT/bin:$PATH"
 fi 

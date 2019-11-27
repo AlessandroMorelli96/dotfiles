@@ -8,6 +8,7 @@ alias vv='vim $HOME/.config/nvim/init.vim'
 alias va='vim $HOME/.config/zsh/aliases.zsh'
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias vz='vim $HOME/.zshrc'
+alias vb='vim $HOME/.config/homebrew/Brewfile'
 
 #   -----------------------------
 #   2.  MAKE TERMINAL BETTER
@@ -81,6 +82,7 @@ fi
 #   7.  TMUX
 #   ---------------------------------------
 
+#alias tmux='tmux -f $HOME/.config/tmux/tmux.conf'
 alias htb-connect='tmux new-session \; split-window -v \; split-window -h \; send-keys 'sudo openvpn ~/Downloads/LiquidNitrogen.ovpn' C-m \; '
 #alias webgoat='cd Vagrant/WebGoat/webgoat-images/vagrant-training/ && vagrant up && q'
 
