@@ -1,8 +1,8 @@
 #!/usr/local/bin/zsh
 
 # Kali
-function kali() {
-    location=$VIRTUALMACHINES/kali.vmwarevm/kali.vmx
+function kaliGnome() {
+    location=$VIRTUALMACHINES/KaliGnome.vmwarevm/KaliGnome.vmx
     case $1 in
         copyfrom)
             scp clownfire@$(vmrun -T fusion getGuestIPAddress $location -wait):$2 $3
@@ -13,7 +13,6 @@ function kali() {
         start)
             vmrun -T fusion start $location nogui
             vmrun -T fusion enableSharedFolders $location
-            #vmrun -T fusion addSharedFolder $location sharedFolder $HOME/sharedFolder
             ssh clownfire@$(vmrun -T fusion getGuestIPAddress $location -wait)
             ;;
         ssh)

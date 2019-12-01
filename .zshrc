@@ -18,9 +18,11 @@ zplugin light romkatv/powerlevel10k
 
 # PLUGIN
 zplugin light zsh-users/zsh-autosuggestions
-zplugin light zsh-users/zsh-syntax-highlighting
+#zplugin light zsh-users/zsh-syntax-highlighting
+zplugin light zdharma/fast-syntax-highlighting
 zplugin light zsh-users/zsh-history-substring-search
 zplugin light clvv/fasd
+zplugin light thetic/extract
 zplugin light junegunn/fzf
 zplugin ice as"program" atclone"rm -f src/auto/config.cache; ./configure" atpull"%atclone" make pick"src/vim"
 zplugin light vim/vim

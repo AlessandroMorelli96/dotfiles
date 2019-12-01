@@ -1,7 +1,7 @@
 #!/usr/local/bin/zsh
 
 # Extract archive
-extract() {
+extract1() {
     if [ -f "$1" ] ; then
         local filename=$(basename "$1")
         local foldername="${filename%%.*}"

@@ -74,7 +74,7 @@ fi
 alias vim='nvim'
 alias vimdiff='nvim -d'
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    alias update='brew update && brew upgrade && brew cask upgrade'
+    alias update='brew update && brew upgrade && brew cask upgrade && mas upgrade'
     alias proxychains='proxychains4'
 fi
 
