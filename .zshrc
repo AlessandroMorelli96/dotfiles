@@ -18,7 +18,6 @@ zplugin light romkatv/powerlevel10k
 
 # PLUGIN
 zplugin light zsh-users/zsh-autosuggestions
-#zplugin light zsh-users/zsh-syntax-highlighting
 zplugin light zdharma/fast-syntax-highlighting
 zplugin light zsh-users/zsh-history-substring-search
 zplugin light clvv/fasd
@@ -34,7 +33,7 @@ source $HOME/.config/zsh/fzf.zsh
 source $HOME/.config/zsh/p10k.zsh                           # To customize prompt, run "p10k configure"
 for file in $HOME/.config/zsh/functions/*; source $file     # Functions
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    source $HOME/.iterm2_shell_integration.zsh
+    source $HOME/.config/iterm2/iterm2_shell_integration.zsh
 fi
 
 # VARIABLE
@@ -43,24 +42,16 @@ HISTFILE=$HOME/.config/zsh/zsh_history
 SAVEHIST=5000
 HISTSIZE=2000
 DISABLE_UNTRACKED_FILES_DIRTY="true"
-export FZF_COMPLETION_TRIGGER='~~'
-export FZF_COMPLETION_OPTS='+c -x'
-export PATH="/usr/local/Cellar/openvpn/2.4.7_1/sbin:$PATH"
+FZF_COMPLETION_TRIGGER='~~'
+FZF_COMPLETION_OPTS='+c -x'
 export EDITOR='nvim'
-fpath=(
-    /usr/local/share/zsh/site-functions
-    /usr/local/share/zsh-completions 
-    $fpath
-)
+
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     JAVA_HOME=/usr/lib/jvm/default-java
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-    VIRTUALMACHINES=$HOME/Virtual\ Machines.localized/
-    export GOPATH=${HOME}/.go
-    export GOROOT=$(brew --prefix golang)
-    export LDFLAGS="-L/usr/local/opt/binutils/lib"
-    export CPPFLAGS="-I/usr/local/opt/binutils/include"
-    export DYLD_LIBRARY_PATH="/usr/local/opt/unicorn/lib/"
+    export GOPATH=$HOME/.config/go                                 # don't forget to change your path correctly!
+    export GOROOT=/usr/local/opt/go/libexec
+    VIRTUALMACHINES=$HOME/VirtualMachine/
 fi
 
 
@@ -91,5 +82,11 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     export PATH="$HOME/go/bin:$HOME/opt/bin:$PATH"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-    export PATH="/usr/local/sbin:$GOPATH/bin:$GOROOT/bin:$PATH"
-fi 
+    export PATH="$GOPATH/bin:$GOROOT/bin:/usr/local/sbin:$PATH"
+fi
+
+# PYENV
+export PYENV_ROOT="$HOME/.config/pyenv"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi

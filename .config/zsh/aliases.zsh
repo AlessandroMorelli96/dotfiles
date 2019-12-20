@@ -14,7 +14,6 @@ alias vb='vim $HOME/.config/homebrew/Brewfile'
 #   2.  MAKE TERMINAL BETTER
 #   -----------------------------
 
-alias pw="fzf --preview 'bat --color \"always\" {}'"    # fzf preview
 alias q='exit'
 alias ls='ls -FGlAhp'
 alias cp='cp -iv'                           # Preferred 'cp' implementation
@@ -30,7 +29,6 @@ alias ..='cd ../'                           # Go back 1 directory level
 alias d='dirs -v | head -10'
 if [[ "$OSTYPE" == "darwin"* ]]; then
     alias top='htop'
-    alias cat='bat'                             # A cat(1) clone with syntax highlighting and Git integration.
 fi
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     alias objdump='objdump -M Intel'
@@ -42,6 +40,7 @@ fi
 #   ---------------------------
 
 alias ttop="top -R -F -s 10 -o rsize"                                       # ttop:  Recommended 'top' invocation to minimize resources
+alias myps='ps $@ -u $USER -o pid,%cpu,%mem,start,time,bsdtime,command'
 
 #   ---------------------------
 #   4.  NETWORKING
@@ -59,32 +58,18 @@ alias openPorts='sudo lsof -i | grep LISTEN'        # openPorts:    All listenin
 alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rules inc/ blocked IPs
 
 #   ---------------------------------------
-#   5.  VAGRANT
-#   ---------------------------------------
-
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    alias vup='vagrant up'
-    alias vhalt='vagrant halt'
-fi
-
-#   ---------------------------------------
 #   6.  PROGRAMS
 #   ---------------------------------------
 
+alias tree='tree -aC -I '.git|node_modules|vendor|.idea|.vscode' --dirsfirst "$@" | less -FRNX
+'
+alias pw="fzf --preview 'bat --color \"always\" {}'"    # fzf preview
+alias trash='mv $@ $HOME/.Trash'
 alias vim='nvim'
 alias vimdiff='nvim -d'
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    alias update='brew update && brew upgrade && brew cask upgrade && mas upgrade'
-    alias proxychains='proxychains4'
+    alias update='brew update && brew upgrade; brew cask upgrade && brew cleanup'
 fi
-
-#   ---------------------------------------
-#   7.  TMUX
-#   ---------------------------------------
-
-#alias tmux='tmux -f $HOME/.config/tmux/tmux.conf'
-alias htb-connect='tmux new-session \; split-window -v \; split-window -h \; send-keys 'sudo openvpn ~/Downloads/LiquidNitrogen.ovpn' C-m \; '
-#alias webgoat='cd Vagrant/WebGoat/webgoat-images/vagrant-training/ && vagrant up && q'
 
 #   --------------------------------------
 #   8. File

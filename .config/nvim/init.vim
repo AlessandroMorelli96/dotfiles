@@ -32,6 +32,9 @@ endif
 " Install pluggins
 call plug#begin('~/.vim/plugged')
 
+" GO
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 Plug 'tpope/vim-sensible'
 
 " FZF
@@ -56,13 +59,15 @@ Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
 Plug 'ncm2/ncm2-markdown-subscope'
 Plug 'ncm2/ncm2-jedi'
+Plug 'ncm2/ncm2-go'
+
 call plug#end()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 1. General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:python3_host_prog="/usr/local/bin/python3"
+let g:python3_host_prog="/Users/clownfire/.config/pyenv/shims/python"
 set shell=/bin/zsh
 set title
 
