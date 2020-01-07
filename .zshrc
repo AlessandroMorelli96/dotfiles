@@ -3,20 +3,21 @@ if [[ -f "$HOME/.zplugin/bin/zmodules/Src/zdharma/zplugin.so" ]]; then
     zmodload zdharma/zplugin
 fi
 
+##########################################################################
+# 
+##########################################################################
 # Useful command similar to xargs
 autoload -U zargs
 
-### Added by Zplugin's installer
+##########################################################################
+# PLUGIN
+##########################################################################
+
+# Zplugin's installer
 source $HOME/.zplugin/bin/zplugin.zsh
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 
-### End of Zplugin installer's chunk
-
-# THEME
-zplugin light romkatv/powerlevel10k
-
-# PLUGIN
 zplugin light zsh-users/zsh-autosuggestions
 zplugin light zdharma/fast-syntax-highlighting
 zplugin light zsh-users/zsh-history-substring-search
@@ -26,7 +27,16 @@ zplugin light junegunn/fzf
 zplugin ice as"program" atclone"rm -f src/auto/config.cache; ./configure" atpull"%atclone" make pick"src/vim"
 zplugin light vim/vim
 
+##########################################################################
+# THEME
+##########################################################################
+
+zplugin light romkatv/powerlevel10k
+
+##########################################################################
 # FILE
+##########################################################################
+
 source $HOME/.config/zsh/autocomplete.zsh
 source $HOME/.config/zsh/aliases.zsh
 source $HOME/.config/zsh/fzf.zsh
@@ -36,7 +46,10 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     source $HOME/.config/iterm2/iterm2_shell_integration.zsh
 fi
 
+##########################################################################
 # VARIABLE
+##########################################################################
+
 ZDOTDIR=$HOME/.config/zsh
 HISTFILE=$HOME/.config/zsh/zsh_history
 SAVEHIST=5000
@@ -51,11 +64,16 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     export GOPATH=$HOME/.config/go                                 # don't forget to change your path correctly!
     export GOROOT=/usr/local/opt/go/libexec
+    export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
+    # export OPENJDK="/usr/local/opt/openjdk/bin"
     VIRTUALMACHINES=$HOME/VirtualMachine/
 fi
 
 
+##########################################################################
 # OPTION
+##########################################################################
+
 setopt AUTO_CD
 setopt LOGIN
 setopt ZLE
@@ -74,19 +92,46 @@ setopt HIST_VERIFY          # make !! simpler
 setopt CORRECT
 setopt CORRECT_ALL
 
+##########################################################################
 # KEY BINDING
+##########################################################################
+
 bindkey '^R' fzf-history-widget
 
+##########################################################################
 # PATH
+##########################################################################
+
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     export PATH="$HOME/go/bin:$HOME/opt/bin:$PATH"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH="$GOPATH/bin:$GOROOT/bin:/usr/local/sbin:$PATH"
+    export PATH=$ANDROID_SDK_ROOT/emulator:$PATH:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/build-tools/$(ls $ANDROID_SDK_ROOT/build-tools | sort | tail -1)
+    # export PATH="$OPENJDK:$PATH"
 fi
 
+##########################################################################
 # PYENV
+##########################################################################
+
 export PYENV_ROOT="$HOME/.config/pyenv"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+fi
+
+##########################################################################
+# TMUX
+##########################################################################
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    if [[ -z "$TMUX" ]] ;then
+        ID="$( tmux ls | grep -vm1 attached | cut -d: -f1 )"    # get the id of a deattached session
+        if [[ -z "$ID" ]] ;then                                 # if not available create a new one
+            tmux new-session
+        else
+            tmux attach-session -t "$ID"                        # if available attach to it
+        fi
+    fi
 fi

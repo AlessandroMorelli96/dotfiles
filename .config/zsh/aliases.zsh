@@ -61,11 +61,10 @@ alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rul
 #   6.  PROGRAMS
 #   ---------------------------------------
 
-alias tree='tree -aC -I '.git|node_modules|vendor|.idea|.vscode' --dirsfirst "$@" | less -FRNX'
 alias pw="fzf --preview 'bat --color \"always\" {}'"    # fzf preview
-alias trash='mv $@ $HOME/.Trash'
 alias vim='nvim'
 alias vimdiff='nvim -d'
+alias tmux='tmux -f ~/.config/tmux/tmux.conf'
 if [[ "$OSTYPE" == "darwin"* ]]; then
     alias update='brew update && brew upgrade; brew cask upgrade && brew cleanup'
 fi
