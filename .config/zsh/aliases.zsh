@@ -1,18 +1,24 @@
-#   -----------------------------
-#   1. EDIT FILE
-#   -----------------------------
+##########################################################################
+# EDIT FILE
+##########################################################################
 
 alias sz='source $HOME/.zshrc'
 alias sa='source $HOME/.config/zsh/aliases.zsh'
 alias vv='vim $HOME/.config/nvim/init.vim'
 alias va='vim $HOME/.config/zsh/aliases.zsh'
-alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias vz='vim $HOME/.zshrc'
 alias vb='vim $HOME/.config/homebrew/Brewfile'
+alias vt='vim $HOME/.config/tmux/tmux.conf'
 
-#   -----------------------------
-#   2.  MAKE TERMINAL BETTER
-#   -----------------------------
+##########################################################################
+# DOTFILE
+##########################################################################
+
+alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+##########################################################################
+# MAKE TERMINAL BETTER
+##########################################################################
 
 alias q='exit'
 alias ls='ls -FGlAhp'
@@ -32,19 +38,19 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     alias objdump='objdump -M Intel'
-    alias gdb='gdb -q'
+    #alias gdb='gdb -q'
 fi
 
-#   ---------------------------
-#   3.  PROCESS MANAGEMENT
-#   ---------------------------
+##########################################################################
+# PROCESS MANAGEMENT
+##########################################################################
 
 alias ttop="top -R -F -s 10 -o rsize"                                       # ttop:  Recommended 'top' invocation to minimize resources
 alias myps='ps $@ -u $USER -o pid,%cpu,%mem,start,time,bsdtime,command'
 
-#   ---------------------------
-#   4.  NETWORKING
-#   ---------------------------
+##########################################################################
+# NETWORKING
+##########################################################################
 
 alias myip='curl ifconfig.me/ip'                    # myip:         Public facing IP Address
 alias netCons='lsof -i'                             # netCons:      Show all open TCP/IP sockets
@@ -57,9 +63,9 @@ alias ipInfo1='ipconfig getpacket en1'              # ipInfo1:      Get info on 
 alias openPorts='sudo lsof -i | grep LISTEN'        # openPorts:    All listening connections
 alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rules inc/ blocked IPs
 
-#   ---------------------------------------
-#   6.  PROGRAMS
-#   ---------------------------------------
+##########################################################################
+# PROGRAMS
+##########################################################################
 
 alias pw="fzf --preview 'bat --color \"always\" {}'"    # fzf preview
 alias vim='nvim'
@@ -69,9 +75,18 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     alias update='brew update && brew upgrade; brew cask upgrade && brew cleanup'
 fi
 
-#   --------------------------------------
-#   8. File
-#   --------------------------------------
+##########################################################################
+# FILE
+##########################################################################
 
 alias -s git='git clone'
 alias -s text='vim'
+
+##########################################################################
+# DOCKER
+##########################################################################
+
+alias juicy-shop='docker run --rm -p 3000:3000 bkimminich/juice-shop'
+alias msfconsole='~/Projects/dockers/metasploit/docker/bin/msfconsole'
+alias msfvenom='~/Projects/docker/metasploit/docker/bin/msfvenom'
+alias cyberchef='docker run --rm -p 8080:8080 remnux/cyberchef'

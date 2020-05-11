@@ -36,14 +36,13 @@ zplugin light romkatv/powerlevel10k
 ##########################################################################
 # FILE
 ##########################################################################
-
 source $HOME/.config/zsh/autocomplete.zsh
 source $HOME/.config/zsh/aliases.zsh
 source $HOME/.config/zsh/fzf.zsh
 source $HOME/.config/zsh/p10k.zsh                           # To customize prompt, run "p10k configure"
 for file in $HOME/.config/zsh/functions/*; source $file     # Functions
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    source $HOME/.config/iterm2/iterm2_shell_integration.zsh
+    #source $HOME/.config/iterm2/iterm2_shell_integration.zsh
 fi
 
 ##########################################################################
@@ -62,11 +61,10 @@ export EDITOR='nvim'
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     JAVA_HOME=/usr/lib/jvm/default-java
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-    export GOPATH=$HOME/.config/go                                 # don't forget to change your path correctly!
-    export GOROOT=/usr/local/opt/go/libexec
-    export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
-    # export OPENJDK="/usr/local/opt/openjdk/bin"
-    VIRTUALMACHINES=$HOME/VirtualMachine/
+    GOPATH=$HOME/.config/go                                 # don't forget to change your path correctly!
+    GOROOT=/usr/local/opt/go/libexec
+    VIRTUALMACHINES="$HOME/Virtual Machines/"
+    MACHINE_DRIVER="vmware"
 fi
 
 
@@ -106,8 +104,13 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     export PATH="$HOME/go/bin:$HOME/opt/bin:$PATH"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
+    # export ANDROID_HOME="/usr/local/Caskroom/android-sdk/4333796"
+    # export PATH=$PATH:$ANDROID_HOME/emulator
+    # export PATH=$PATH:$ANDROID_HOME/tools
+    # export PATH=$PATH:$ANDROID_HOME/tools/bin
+    # export PATH=$PATH:$ANDROID_HOME/platform-tools
     export PATH="$GOPATH/bin:$GOROOT/bin:/usr/local/sbin:$PATH"
-    export PATH=$ANDROID_SDK_ROOT/emulator:$PATH:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/build-tools/$(ls $ANDROID_SDK_ROOT/build-tools | sort | tail -1)
+    # export PATH=$ANDROID_SDK_ROOT/emulator:$PATH:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/build-tools/$(ls $ANDROID_SDK_ROOT/build-tools | sort | tail -1)
     # export PATH="$OPENJDK:$PATH"
 fi
 
