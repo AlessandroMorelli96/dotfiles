@@ -1,0 +1,6 @@
+#!/usr/local/bin/zsh
+
+# ROPgadget docker
+function ROPgadget() {
+    docker run --rm -v $(pwd)/$1:/work/$1 robertlarsen/pwntools ROPgadget
+}

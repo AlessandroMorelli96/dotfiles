@@ -1,6 +1,6 @@
 #!/usr/local/bin/zsh
 
 # python docker
-function python() {
+function python1() {
     docker run --rm -v $PWD/$1:/tmp/$1 python /tmp/$1
 }

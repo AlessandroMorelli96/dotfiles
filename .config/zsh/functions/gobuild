@@ -1,0 +1,6 @@
+#!/usr/local/bin/zsh
+
+# gobuild docker
+function goinstall() {
+    docker run --rm -e GOOS=darwin -e GOARCH=amd64 -e GOBIN="/go/bin" -v $GOPATH/bin:/go/bin -v $PWD:/tmp golang go install /tmp/$1 
+}
