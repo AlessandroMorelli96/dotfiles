@@ -1,0 +1,10 @@
+e scr.utf8 = true
+e scr.utf8.curvy = true
+e scr.pager=less -R
+#e asm.describe = true
+#e asm.pseudo = true
+#e asm.ucase = true
+#e io.cache = true
+scr.color=3
+#scr.utf8=true
+eco monokai
