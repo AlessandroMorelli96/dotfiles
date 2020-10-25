@@ -4,11 +4,6 @@
 
 alias sz='source $HOME/.zshrc'
 alias sa='source $HOME/.config/zsh/aliases.zsh'
-alias vv='vim $HOME/.config/nvim/'
-alias va='vim $HOME/.config/zsh/aliases.zsh'
-alias vz='vim $HOME/.zshrc'
-alias vb='vim $HOME/.config/homebrew/Brewfile'
-alias vt='vim $HOME/.config/tmux/tmux.conf'
 
 ##########################################################################
 # DOTFILE
@@ -42,7 +37,7 @@ fi
 # DIRECTORY
 ##########################################################################
 
-alias uni='cd /Volumes/SSD/buckup/University/'
+alias uni='cd /Volumes/SSD/buckup/University2020/'
 
 ##########################################################################
 # NETWORKING
@@ -55,11 +50,11 @@ alias netCons='lsof -i'                             # netCons:      Show all ope
 # PROGRAMS
 ##########################################################################
 
-alias pw="fzf --preview 'bat --color \"always\" {}'"    # fzf preview
 alias tmux='tmux -f ~/.config/tmux/tmux.conf'
 if [[ "$OSTYPE" == "darwin"* ]]; then
     alias update='brew update && brew upgrade; brew upgrade --cask && brew cleanup'
 fi
+alias vim='nvim'
 
 ##########################################################################
 # FILE
@@ -72,11 +67,11 @@ alias -s text='nvim'
 # DOCKER
 ##########################################################################
 
-alias juicy-shop='docker run --rm -p 3000:3000 bkimminich/juice-shop'
-alias msfconsole='~/Projects/dockers/metasploit/docker/bin/msfconsole'
-alias msfvenom='~/Projects/docker/metasploit/docker/bin/msfvenom'
-# alias python="docker run --rm -it -v $(pwd)/$1:/tmp/$1 python /tmp/$1"
-alias shellcraft='docker run --rm robertlarsen/pwntools shellcraft'
-alias constgrep='docker run --rm robertlarsen/pwntools constgrep'
-alias cyclic='docker run --rm robertlarsen/pwntools cyclic'
-alias go="docker run --rm -e GOOS=darwin -e GOARCH=amd64 -v $GOPATH/bin:/go/bin/darwin_amd64 golang go"
+#alias juicy-shop='docker run --rm -p 3000:3000 bkimminich/juice-shop'
+#alias msfconsole='~/Projects/dockers/metasploit/docker/bin/msfconsole'
+#alias msfvenom='~/Projects/docker/metasploit/docker/bin/msfvenom'
+## alias python="docker run --rm -it -v $(pwd)/$1:/tmp/$1 python /tmp/$1"
+#alias shellcraft='docker run --rm robertlarsen/pwntools shellcraft'
+#alias constgrep='docker run --rm robertlarsen/pwntools constgrep'
+#alias cyclic='docker run --rm robertlarsen/pwntools cyclic'
+#alias go="docker run --rm -e GOOS=darwin -e GOARCH=amd64 -v $GOPATH/bin:/go/bin/darwin_amd64 golang go"

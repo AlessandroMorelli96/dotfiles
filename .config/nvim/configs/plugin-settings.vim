@@ -5,9 +5,6 @@
 
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
-"let g:netrw_browse_split = 4
-"let g:netrw_altv = 1
-"let g:netrw_winsize = 15
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COC-nvim
@@ -138,7 +135,7 @@ let g:startify_change_to_dir = 1
 let g:startify_custom_header = s:center(s:header)
 let g:startify_bookmarks = [
             \ { 't': '~/.config/tmux/tmux.conf' },
-            \ { 'v': '~/.config/vim/' },
+            \ { 'v': '~/.config/nvim/init.vim' },
             \ { 'z': '~/.zshrc' },
             \ '~/Projects/writeup',
             \ '~/Projects/writeupPrivate',

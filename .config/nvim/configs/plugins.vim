@@ -10,11 +10,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'christoomey/vim-tmux-navigator'               " Vim Tmux navigator
 Plug 'tpope/vim-fugitive'                           " Git Plugin
 Plug 'morhetz/gruvbox'
-
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 "Plug 'justinmk/vim-dirvish'
-"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-"Plug 'junegunn/fzf.vim'
-
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'

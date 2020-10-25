@@ -19,7 +19,6 @@ runtime configs/main.vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Start Option
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " close the last window if is useless
 "function! CheckLeftBuffers()
 "  if tabpagenr('$') == 1

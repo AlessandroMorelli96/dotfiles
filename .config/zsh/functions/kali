@@ -1,0 +1,6 @@
+#!/usr/local/bin/zsh
+
+# kali docker
+function kali() {
+    docker run --rm -ti -v $PWD:/tmp kalilinux/kali-rolling /bin/bash
+}

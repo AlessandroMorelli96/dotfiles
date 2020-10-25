@@ -1,6 +1,0 @@
-#!/usr/local/bin/zsh
-
-# radare2 docker
-function r2() {
-    docker run --rm -it -v $PWD/$1:/tmp/$1 radare/radare2 r2 /tmp/$1
-}

@@ -1,8 +1,6 @@
 #!/usr/local/bin/zsh
 
-# Last downloaded file
-ldf() {
-    local file=~/Downloads/$(ls -1t ~/Downloads/ | head -n1)
-    echo "$file"
-    mv "$file" .
+# downloaded file
+df() {
+    mv $(du -a ~/Downloads/* | awk '{print $2}' | fzf) .
 }

@@ -11,9 +11,8 @@ Plug 'christoomey/vim-tmux-navigator'               " Vim Tmux navigator
 Plug 'tpope/vim-fugitive'                           " Git Plugin
 Plug 'morhetz/gruvbox'
 
-"Plug 'justinmk/vim-dirvish'
-"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-"Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'itchyny/lightline.vim'

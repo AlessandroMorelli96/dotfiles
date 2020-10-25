@@ -2,10 +2,6 @@
 " General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Remove netrw
-"let loaded_netrw = 1
-"let loaded_netrwPlugin = 1
-
 set shell=zsh
 set title
 set history=1000                                    " Sets how many lines of history VIM has to remember

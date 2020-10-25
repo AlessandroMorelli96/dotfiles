@@ -1,0 +1,46 @@
+: 1603315542:0;rm .zcompdump
+: 1603315552:0;vz
+: 1603315574:0;which go
+: 1603315579:0;q
+: 1603315833:0;vim vz
+: 1603315838:0;ls
+: 1603315844:0;vim .zshrc
+: 1603315848:0;vz
+: 1603316023:0;fzf-tmux
+: 1603316063:0;vz
+: 1603316204:0;q
+: 1603316243:0;cat $FPATH
+: 1603316275:0;cd /usr/local/Cellar/zsh/5.8/share/zsh/functions
+: 1603316280:0;..
+: 1603316283:0;cd
+: 1603316284:0;c
+: 1603316286:0;cd /usr/local/Cellar/zsh/5.8/share/zsh/functions
+: 1603316288:0;c
+: 1603316289:0;cd
+: 1603316290:0;c
+: 1603316293:0;cat $FPATH
+: 1603316304:0;echo $FPATH
+: 1603316333:0;rg /usr/local/share/zsh/site-functions
+: 1603316342:0;rg
+: 1603316357:0;rg "/usr/local/share/zsh/site-functions"
+: 1603316379:0;vim
+: 1603316423:0;cd /usr/local/share/zsh/site-functions
+: 1603316436:0;..
+: 1603316440:0;cd functions
+: 1603316452:0;cd ..
+: 1603316461:0;brew list
+: 1603316488:0;cd .config
+: 1603316494:0;rg "/usr/local/share/zsh/site-functions"
+: 1603316861:0;brew uninstall docker-compose android-platform-toos adoptopenjdk8
+: 1603316872:0;brew uninstall docker-compose android-platform-tools adoptopenjdk8
+: 1603316893:0;brew uninstall docker-compose android-platform-tools
+: 1603316940:0;brew uninstall openjdk
+: 1603316974:0;brew cask unistall adoptopenjdk8
+: 1603316982:0;brew cask uninstall adoptopenjdk8
+: 1603316991:0;brew clean
+: 1603316994:0;brew
+: 1603317033:0;vim ~/.config/homebrew
+: 1603317087:0;cd
+: 1603317089:0;c
+: 1603317092:0;vz
+: 1603317217:0;q
