@@ -12,18 +12,13 @@ set laststatus=2
 set showtabline=2
 set noshowmode
 set background=dark
-
-" Theme
-if has('nvim') || has('termguicolors')
-  set termguicolors
-endif
+set textwidth=80                                    " Set max text width to 80 so the text is organized
 
 " Make cliccable the buffers tab
 if has('nvim')
     let g:lightline.component_raw = {'buffers': 1}
     let g:lightline#bufferline#clickable = 1
 endif
-colorscheme gruvbox
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Spaces and Tubs
@@ -41,13 +36,13 @@ set smartindent
 
 syntax enable                                       " Enable syntax highlighting
 set ffs=unix,dos,mac                                " Use Unix as the standard file type
-set scrolloff=7                                            " Set 7 lines to the cursor - when moving vertically using j/k
+set scrolloff=7                                     " Set 7 lines to the cursor - when moving vertically using j/k
 set number                                          " Set numbers of line
 set relativenumber                                  " Line Number
 set lazyredraw                                      " Don't redraw while executing macros (good performance config)
 set foldcolumn=1                                    " Add a bit extra margin to the left
 set cmdheight=2                                     " Height of the command bar
-set hidden                                             " A buffer becomes hidden when it is abandoned
+set hidden                                          " A buffer becomes hidden when it is abandoned
 
 " Enable filetype plugins
 filetype plugin on
@@ -58,12 +53,16 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store   " Ignore compiled files
 set whichwrap+=<,>,h,l
 "set backspace=indent,eol,start
 
+" Color
+hi! Normal ctermbg=NONE guibg=NONE 
+hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Searching
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set ignorecase                                      " Ignore case when searching
-"set smartcase                                       " When searching try to be smart about cases
+set smartcase                                       " When searching try to be smart about cases
 
 " Stark highlighting is enough to see the current match; don't need the
 " centering, which can be annoying.

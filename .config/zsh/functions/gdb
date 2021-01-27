@@ -1,6 +1,0 @@
-#!/usr/local/bin/zsh
-
-# gdb docker
-function gdb() {
-    docker run --rm -it --privileged -v $PWD/$1:/tmp/$1 gdb /tmp/$1
-}

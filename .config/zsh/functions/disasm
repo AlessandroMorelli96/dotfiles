@@ -1,6 +1,0 @@
-#!/usr/local/bin/zsh
-
-# disasm docker
-function disasm() {
-    echo -en $1 | docker run -i --rm robertlarsen/pwntools disasm -c amd64
-}

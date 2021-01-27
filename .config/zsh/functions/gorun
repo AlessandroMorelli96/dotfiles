@@ -1,6 +1,0 @@
-#!/usr/local/bin/zsh
-
-# gorun docker
-function gorun() {
-    docker run --rm -v $PWD/$1:/tmp/$1 golang go run /tmp/$1
-}

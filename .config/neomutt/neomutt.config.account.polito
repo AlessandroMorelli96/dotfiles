@@ -1,0 +1,20 @@
+#
+# This is an example Polito account
+#
+
+# reset
+unvirtual-mailboxes *
+
+set postponed = "$HOME/.mail/$EMAIL_ADDRESS_POLITO/Drafts"
+set trash = "$HOME/.mail/$EMAIL_ADDRESS_POLITO/Trash"
+
+# Tag
+virtual-mailboxes \
+    "Inbox" "notmuch://?query=tag:inbox and tag:polito" \
+    "Archive" "notmuch://?query=tag:archive and tag:polito" \
+    "Sent" "notmuch://?query=tag:sent and tag:polito" \
+    "Deleted" "notmuch://?query=tag:deleted and tag:polito"
+    "Important" "notmuch://?query=tag:flagged and tag:polito" \
+
+set from = $EMAIL_ADDRESS_POLITO
+set sendmail = "/usr/local/bin/msmtp -a polito"

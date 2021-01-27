@@ -1,0 +1,4 @@
+colorscheme gruvbox
+add ~/Music
+update-cache -f
+

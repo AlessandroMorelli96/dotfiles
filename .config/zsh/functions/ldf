@@ -1,6 +1,0 @@
-#!/usr/local/bin/zsh
-
-# downloaded file
-df() {
-    mv $(du -a ~/Downloads/* | awk '{print $2}' | fzf) .
-}

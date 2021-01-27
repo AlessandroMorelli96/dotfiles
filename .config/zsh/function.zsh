@@ -1,9 +1,19 @@
 
 # Edit config files
 vc() {
-    fd --type file . ~/.config/ | fzf | xargs $EDITOR
+    fd --type file . ~/.config | fzf --multi | xargs $EDITOR
 }
 
+# pwntools
+pwntools() {
+    vctl system start
+    vctl run --rm --tty --interactive --privileged --volume $PWD/$1:h:/tmp/$1:h pwntools /tmp/$1
+    if [ -z $(vctl ps | awk 'NR==5 {print $8}') ]; then
+        vctl system stop
+    fi
+}
+
+# gdb
 gdb() {
     vctl system start
     vctl run --rm --tty --interactive --privileged --volume $PWD/$1:h:/tmp/$1:h gdb /tmp/$1
@@ -12,10 +22,28 @@ gdb() {
     fi
 }
 
-# ROPgadget
-ROPgadget() {
+# ropper
+ropper() {
     vctl system start
-    vctl run --rm --volume $(pwd)/$1:h:/work/$1:h robertlarsen/pwntools ROPgadget
+    vctl run --rm --tty --interactive --privileged --volume $PWD/$1:h:/tmp/$1:h ropper --console --file /tmp/$1
+    if [ -z $(vctl ps | awk 'NR==5 {print $8}') ]; then
+        vctl system stop
+    fi
+}
+
+# ROPgadget
+#ROPgadget() {
+#    vctl system start
+#    vctl run --rm --volume $(pwd)/$1:h:/work/$1:h robertlarsen/pwntools ROPgadget
+#    if [ -z $(vctl ps | awk 'NR==5 {print $8}') ]; then
+#        vctl system stop
+#    fi
+#}
+
+# gobuild
+gobuild() {
+    vctl system start
+    vctl run --rm --volume $PWD/$1:h:/tmp/$1:h -w /tmp/$1:h --env GOOS=darwin --env GOARCH=amd64 golang go build -v /tmp/$1
     if [ -z $(vctl ps | awk 'NR==5 {print $8}') ]; then
         vctl system stop
     fi
@@ -30,18 +58,27 @@ gorun() {
     fi
 }
 
-# gobuild
-goinstall() {
+# pwndocker
+#pwndocker() {
+#    vctl system start
+#    vctl run --rm --volume $PWD/$1:/ctf/work --privileged skysider/pwndocker
+#    if [ -z $(vctl ps | awk 'NR==5 {print $8}') ]; then
+#        vctl system stop
+#    fi
+#}
+
+# kali
+kali() {
     vctl system start
-    vctl run --rm -e GOOS=darwin -e GOARCH=amd64 -e GOBIN="/go/bin" --volume $GOPATH/bin:/go/bin --volume $PWD:/tmp golang go install /tmp/$1 
+    vctl run --rm -t -i --volume $PWD/:/tmp/ -w /tmp/ kalilinux/kali-bleeding-edge
     if [ -z $(vctl ps | awk 'NR==5 {print $8}') ]; then
         vctl system stop
     fi
 }
 
-# Edit config files
-op() {
-    cd $(fd --type directory --max-depth 1 . ~/Projects/ | fzf)
+# Edit project files
+vp() {
+    fd --type directory --max-depth 1 . ~/Projects/ | fzf | xargs $EDITOR
 }
 
 # Better cd
@@ -65,7 +102,6 @@ checksum() {
 # Start a simple web server in the current directory
 http() {
     local port="${1:-8000}"
-    #python3 -m http.server $port
     python3 -m http.server
 }
 
@@ -100,7 +136,7 @@ trash() {
 
 # Better tree visualization
 tree() {
-    tree -aC --dirsfirst "$@" | less -FRNX
+    tree -aC --dirsfirst "$@"
 }
 
 # Upgrade Repository

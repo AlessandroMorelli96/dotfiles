@@ -1,6 +1,0 @@
-#!/usr/local/bin/zsh
-
-# Better tree visualization
-function tre() {
-    tree -aC --dirsfirst "$@" | less -FRNX
-}

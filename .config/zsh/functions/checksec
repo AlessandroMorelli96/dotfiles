@@ -1,6 +1,0 @@
-#!/usr/local/bin/zsh
-
-# checksec docker
-function checksec() {
-    docker run --rm -v $PWD/$1:/work/$1 robertlarsen/pwntools checksec ./$1
-}

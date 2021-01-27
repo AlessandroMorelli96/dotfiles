@@ -1,0 +1,22 @@
+#
+# This is an example Gmail account
+#
+
+# reset
+unvirtual-mailboxes *
+set postponed = "$HOME/.mail/$EMAIL_ADDRESS_GMAIL/Drafts"
+set trash = "$HOME/.mail/$EMAIL_ADDRESS_GMAIL/Trash"
+
+# Tag
+virtual-mailboxes "Inbox" "notmuch://?query=tag:inbox and tag:gmail"
+virtual-mailboxes "Archive" "notmuch://?query=tag:archive and tag:gmail"
+virtual-mailboxes "Sent" "notmuch://?query=tag:sent and tag:gmail"
+virtual-mailboxes "Family" "notmuch://?query=tag:family and tag:gmail"
+virtual-mailboxes "ToolBox" "notmuch://?query=tag:toolbox and tag:gmail"
+virtual-mailboxes "Social" "notmuch://?query=tag:social and tag:gmail"
+virtual-mailboxes "Spam" "notmuch://?query=tag:spam and tag:gmail"
+virtual-mailboxes "Deleted" "notmuch://?query=tag:deleted and tag:gmail"
+virtual-mailboxes "Important" "notmuch://?query=tag:flagged and tag:gmail"
+
+set from = $EMAIL_ADDRESS_GMAIL
+set sendmail = "/usr/local/bin/msmtp -a gmail"

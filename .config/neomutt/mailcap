@@ -1,0 +1,28 @@
+# MS Excel
+# this will use the default xls spreadsheet handler from open
+#application/x-msexcel; /Users/vdanen/.mutt/view_attachment.sh %s
+#application/ms-exc; /Users/vdanen/.mutt/view_attachment.sh %s
+#application/excel; /Users/vdanen/.mutt/view_attachment.sh %s
+#application/msexcel; /Users/vdanen/.mutt/view_attachment.sh %s
+#application/vnd.ms-exc; /Users/vdanen/.mutt/view_attachment.sh %s
+#application/vnd.ms-excel; /Users/vdanen/.mutt/view_attachment.sh %s
+
+# MS Word documents
+application/msword; ~/.config/neomutt/view_attachment.sh %s "-" '/Applications/TextEdit.app'
+
+# Images
+image/jpg; ~/.config/neomutt/view_attachment.sh %s jpg
+image/jpeg; ~/.config/neomutt/view_attachment.sh %s jpg
+image/pjpeg; ~/.config/neomutt/view_attachment.sh %s jpg
+image/png; ~/.config/neomutt/view_attachment.sh %s png
+image/gif; ~/.config/neomutt/view_attachment.sh %s gif
+
+# PDFs
+application/pdf; ~/.config/neomutt/view_attachment.sh %s pdf
+
+# HTML
+text/html; lynx -assume_charset=%{charset} -display_charset=utf-8 -collapse_br_tags -dump %s; nametemplate=%s.html; copiousoutput
+#text/html; ~/.config/neomutt/view_attachment.sh %s html
+
+# Unidentified files
+application/octet-stream; ~/.config/neomutt/view_attachment.sh %s "-"

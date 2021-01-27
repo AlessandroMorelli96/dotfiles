@@ -1,6 +1,0 @@
-#!/usr/local/bin/zsh
-
-# asm docker
-function asm() {
-    echo $1 | docker run -i --rm robertlarsen/pwntools asm -c amd64 | xxd
-}

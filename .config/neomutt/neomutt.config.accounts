@@ -1,0 +1,17 @@
+
+# mail location
+set sendmail_wait = 0
+unset record
+
+set virtual_spoolfile
+set folder=~/.mail/
+
+# folders
+folder-hook "Inbox-polito" 'source ~/.config/neomutt/neomutt.config.account.polito'
+folder-hook "Inbox-gmail" 'source ~/.config/neomutt/neomutt.config.account.gmail'
+
+# default account
+source ~/.config/neomutt/neomutt.config.account.gmail
+
+macro index,pager <f1> '<sync-mailbox><enter-command>source ~/.config/neomutt/neomutt.config.account.gmail<enter><change-folder>!<enter>'
+macro index,pager <f2> '<sync-mailbox><enter-command>source ~/.config/neomutt/neomutt.config.account.polito<enter><change-folder>!<enter>'
